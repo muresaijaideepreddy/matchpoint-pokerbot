@@ -1,11 +1,124 @@
-# Short Deck PLO5 Bot Tournament: Participant Bundle
+# MatchPoint | Heads-up short-deck PLO5
 
-Your bot is **one file, `agent.py`**. It is a complete FastAPI HTTP web server. You edit one marked section, and the tournament runs the file as-is.
+MatchPoint is a Python bot for heads-up short-deck five-card pot-limit Omaha. In a 2,000-hand practice match against Quad-J under the organizer's Linux referee, it won **1,748 chips (+0.437 big blinds per hand)**. Both bots finished with zero errors, skipped decisions or timeouts. [Match evidence](evidence/) · [Download the bot and training data](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases)
+
+The game engine, referee, Docker recipes and starter opponents come from the TAMU Datathon Poker Bot Challenge. This fork adds the MatchPoint strategy, hand evaluation tables, training tools, checkpoints and experiments. [Organizer's starter repository](https://github.com/tamu-datathon-org/heads-up-bundle)
+
+The tournament starts `agent.py`. It serves MatchPoint with the Compact96 value model trained on Swirl and the 150,000-traversal self-play policy. `rivercount.py` preserves the original bot for head-to-head testing. Both use the tournament's exact two-hole-card and three-board-card rule.
+
+MatchPoint observes how often its opponent opens, reraises and folds. Against opponents who consistently open and reraise before the flop, it uses a policy learned through self-play. A compact neural policy estimates the value of each legal action against other common opponents. A Monte Carlo policy table handles opponents that raise almost every chance. Only observations from the current half affect the choice.
+
+## Run on a laptop
+
+Use Python 3.12+ and install the development requirements in your virtual environment.
+
+~~~sh
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python agent.py
+~~~
+
+The server reads `PORT` and defaults to 5008. The following command starts both bots on private loopback ports, restarts them between halves, and runs the official referee over 2,000 hands.
+
+~~~sh
+python tools/http_match.py agent.py rivercount.py --deals 1000 --seed local-match --json runs/local-match.json
+~~~
+
+Pass `--entry-script` to launch each bot as `python ENTRY.py`, the same command used by the tournament image. The local referee generates a fresh authentication token per bot and connects via loopback.
+
+For faster comparisons, use the in-process runners. The strategy comparison expresses results in big blinds per played hand. The referee's big blinds per duplicate deal is twice that value. Each tournament match awards 1 point for a win, 0.5 for a chop and 0 for a loss. The in-process comparison excludes HTTP and the official time bank.
+
+~~~sh
+python tools/compare_agents.py --candidate agent.py --incumbent rivercount.py --seeds test-a test-b --deals 1000
+python tools/league.py agent.py rivercount.py models/laptop_neural.npz models/cfr_40k.npz --seeds cup-a cup-b
+~~~
+
+## Live training dashboard
+
+To watch an SSH training run from this laptop, start the status page in a separate terminal. Supply the same host key file used for the training connection.
+
+~~~sh
+python tools/training_status.py --target USER@GPU --remote-dir pokerbot-training/RUN --known-hosts /path/to/known_hosts
+~~~
+
+Open `http://127.0.0.1:8765/`. While the page is open it reads progress, errors and GPU usage over SSH, and displays the train and validation curves. Match comparisons come from completed reports in the local `runs` directory. The page shows the last successful observation time when the connection drops.
+
+## GPU model comparison
+
+The Swirl experiments trained a 64-unit neural model on the original replay, then generated 96,000 fresh hands. The expanded replay covers 544,486 decisions. We tested compact neural networks, two networks with additional card and betting-history features, and shallow boosted decision trees. The train/validation split groups all decisions from one physical deal together. Every challenger used the same self-play and aggression experts as the previous MatchPoint.
+
+On two full matches per opponent, Compact96 recorded 14 wins across seven practice styles. Frozen MatchPoint recorded 13 wins and a chop on the same deals. Compact96 gained 0.255 BB/hand (paired 95% interval +0.133 to +0.378). On two separate confirmation seeds against value, tight and polarized opponents, the gain was 0.263 BB/hand (+0.125 to +0.402) and both bots earned six points. Direct matches against the frozen version chopped on all four seeds.
+
+Compact96 won all 12 matches against pinned public bots. Frozen MatchPoint won 11 and chopped once on the corresponding seeds. Ten historical reference reports lack per-deal scores and several opponents adjusted their play for elapsed computation time. The 12-match record uses duplicate scoring without the external clock. With the 40,000-traversal self-play policy, Compact96 beat Quad-J at +0.624 BB/hand in a full Linux container match (95% interval +0.279 to +0.969). Both players had zero errors and zero skipped requests.
+
+Switching Compact96 to the 150,000-traversal policy preserved all 12 public wins and improved the harder four-opponent field from 7 to 8 points out of 12. Its paired gain there was +0.208 BB/hand (+0.054 to +0.363). All three direct matches between the two configurations chopped. In the same one-CPU container test against Quad-J, the 150,000-traversal version won at +0.771 BB/hand (+0.441 to +1.100) with zero errors or skipped decisions. See `gpu_evaluation.json` for the selected checkpoint, opponent versions and further comparisons.
+
+The referee gives each bot 15 seconds to start, one second per HTTP request, and eight seconds of charged time per 1,000-hand half after a one-millisecond allowance per request. A bot must choose an action present in `observation.legal_actions`. When the bank runs out, the referee checks or folds. Five errors forfeit a half. The timed tests used the organizer's Dockerfiles with one CPU and 4 GiB per bot, a read-only filesystem and no external network.
+
+## Previous MatchPoint checkpoint
+
+The following laptop results describe the 64-unit checkpoint shipped before the Swirl experiments. Its weights are in `models/laptop_neural.npz`; `evaluation.json` records its historical source and model hashes.
+
+Across six 2,000-hand matches against the frozen RiverCount bot, MatchPoint averaged **+0.318 big blinds per played hand**, with two wins, four chops and zero losses. Four of those matches used a separate set of confirmation seeds. On those seeds, hands ending in folds contributed +0.500 BB/hand and showdowns contributed −0.194 BB/hand, for a net +0.306 BB/hand. Both bots received the same cards in opposite seats.
+
+Two six-bot round robins produced 30 full matches. MatchPoint earned 5.5 of 10 available points and shared first place with the standalone 40,000-traversal self-play policy and the 11-rule Monte Carlo policy. We also evaluated a 192-unit neural network on the same opponent lineup as the compact 64-unit model. The bigger model earned 0.424 fewer BB/hand on average across seven styles, with a paired 95% interval from −0.601 to −0.247. MatchPoint uses the compact model.
+
+MatchPoint played one full practice match against each of 12 publicly available team snapshots. It recorded **10 wins, 2 chops, 0 losses** (11 of 12 points). The chops were Quad-J and RangeRunner. On fresh deals it beat Quad-J (+0.477 BB/hand) and ReveillePLO (+1.207 BB/hand). A regularized 128-unit challenger also won those two matches, with a paired difference of +0.078 BB/hand versus MatchPoint across both opponents (95% interval −0.169 to +0.324). The default policy remains the version tested across all 12 opponents.
+
+These public matches used the official game and duplicate scoring over local process pipes. The external time bank was disabled. ShortStackSage used its own fast fallback on about 79% of decisions; RangeRunner used its Windows Numba backend and recorded more than eight seconds of computation per half. Both details affect how closely their tests reproduce tournament play.
+
+In a separate 2,000-hand HTTP match against RiverCount, the official referee launched fresh Python 3.12 processes for both halves. MatchPoint became ready in 1.612 and 1.585 seconds (limit 15 seconds). It used 0.174 and 0.192 seconds of its eight-second time bank, with zero errors or skipped decisions across 5,312 requests. It earned +0.419 BB/hand and the match chopped. This test ran on the laptop with training workers stopped.
+
+In a full HTTP match against the public ReveillePLO snapshot, MatchPoint won at **+1.071 BB/hand** (95% interval +0.797 to +1.344). Its startups took 6.487 and 6.739 seconds. Its charged time was 5.643 and 5.518 seconds, with zero errors or skipped decisions. ReveillePLO exhausted its clock in both halves and the referee skipped 755 and 763 of its calls. Quad-J completed one timed half and missed the next startup deadline. The 12-opponent practice record above excludes these timed runs.
+
+`evaluation.json` records the checkpoint hashes, match seeds, per-opponent results and timed referee statistics. Public opponents are pinned practice snapshots. Their code and weights stay outside the handoff.
+
+## Train on CPU or GPU
+
+The simulator branches from an observed decision, plays out every legal action on the same hidden deal and records terminal chips. The model sees only information available to the acting player. The neural trainer groups both seats and all streets of each deal together before splitting training and validation examples.
+
+The following commands reproduce the compact offline learning experiment. The simulator uses CPU workers. PyTorch is required only for fitting the neural checkpoint. The tournament server uses NumPy.
+
+~~~sh
+python tools/train_rl.py --profiles incumbent station half pot random tight value --deals 2000 --workers 2 --min-samples 36 --confidence-z 2.1 --retain-z 2.8 --seed laptop-rl-train-20261107 --checkpoint runs/reproduction-table.json --dataset-dir runs/laptop-replay --eval-deals 0
+python tools/fit_neural.py --dataset-dir runs/laptop-replay --output runs/fitted.npz --device cpu --epochs 12 --batch-size 512
+python tools/compare_agents.py --candidate runs/fitted.npz --incumbent rivercount.py --seeds fitted-a fitted-b
+~~~
+
+On a GPU server with CUDA-enabled PyTorch, use `--device cuda` for the fitting step. `--detailed` adds suit-invariant card and betting-history inputs, `--width` sets the number of units in each hidden layer, and `--disk-backed` stages large replay tensors in temporary files. The model is exported to a NumPy checkpoint and checked against PyTorch predictions before use.
+
+For an additional GPU experiment, extract `MatchPoint.zip` and `TrainingReplay.zip` into the same directory. The replay contains 331,714 counterfactual decisions from 124,000 simulated hands. With CUDA-enabled PyTorch installed, the following trains a challenger on both replay sources and plays it against the shipped policy on fresh deals.
+
+~~~sh
+python tools/fit_neural.py --dataset-dir runs/laptop-replay --dataset-dir runs/league-replay --output runs/gpu-challenger.npz --device cuda --width 128 --detailed --weight-decay 0.01 --patience 4 --epochs 32
+python tools/compare_agents.py --candidate runs/gpu-challenger.npz --incumbent agent.py --seeds gpu-check-a gpu-check-b gpu-check-c gpu-check-d --deals 1000
+~~~
+
+The self-play trainer uses external-sampling Monte Carlo counterfactual regret minimization (MCCFR). It groups similar private equities and public betting situations into information sets. At each sampled deal it compares the traverser's legal actions and updates regrets, then exports average action frequencies. A lookup and a seeded draw select the action during a match. Use a fresh output filename for a new experiment, or `--resume` with the same configuration and a larger iteration target.
+
+~~~sh
+python tools/train_cfr.py --iterations 40000 --burnin 1000 --samples 128 --allin-samples 64 --save-every 5000 --output runs/cfr-reproduction.npz
+python tools/compare_agents.py --candidate runs/cfr-reproduction.npz --incumbent rivercount.py --seeds cfr-a cfr-b
+~~~
+
+A CPU or CUDA **training** host must allow Python jobs. An OpenAI-compatible chat or embedding endpoint can review text. Tournament play is offline and all shipped policies run on CPU.
+
+To reproduce Compact96, extract `TrainingReplay.zip` and `FreshReplay.zip` from the GitHub release into the project directory. Together they contain 544,486 training and validation examples. The released checkpoint uses the best validation epoch from the following configuration.
+
+~~~sh
+python tools/fit_neural.py --device cuda --dataset-dir runs/laptop-replay --dataset-dir runs/league-replay --dataset-dir fresh/replay --output runs/compact96-reproduction.npz --width 96 --epochs 48 --patience 6 --batch-size 1024 --learning-rate 0.0006 --weight-decay 0.015 --margin 2 --seed 7721
+~~~
 
 ## Files
 | File | What it is |
 |---|---|
-| `agent.py` | **Your bot** with starter code. Your agent's file name **MUST BE** agent.py and it **MUST BE** in the root of your repo (i.e. don't move it) |
+| `agent.py` | Tournament entry point. Set `PARTICIPANT` to the registered team name before submission. |
+| `matchpoint.py` | MatchPoint's strategy selection and referee callbacks. |
+| `rivercount.py` | Original RiverCount strategy for comparison. |
+| `models/` | Frozen, CPU-readable policy checkpoints. Keep the shipped model files with the entry point. |
+| `equity.py` | Omaha showdown evaluation and postflop equity. |
+| `board_scores.npz` and `equity_helpers.npz` | Completed-board scores, five-card ranking tables, sampled runouts and exact river masks. Regenerate offline with `python equity.py`. |
+| `preflop.bin.z` | Precomputed preflop equity for all 376,992 five-card holdings. Keep this file alongside `agent.py`. The optional offline generator is `tools/generate_preflop.py`. |
 | `game.py` | The rules and game state (editing this has no effect on the evaluation platform's match referee's game). |
 | `evaluator.py` | Cards and hand ranking helper tool (same as above, but its helpers are useful). |
 | `judge_engine.py` | A local judge that referees a match between two running bots and prints the result. |
@@ -33,10 +146,9 @@ Your agent will initially require certain dependencies to run. Install them as s
 pip install -r requirements-dev.txt
 ```
 
-## 3. Write your bot
-Open `agent.py` and edit:
-1. `PARTICIPANT` and `AGENT_NAME` (your team and bot names).
-2. The three functions between `YOUR CODE HERE` and `END OF YOUR CODE`:
+## 3. Strategy callbacks
+
+The judge calls these functions in `agent.py`.
 
 | Function | When it runs | What to do |
 |---|---|---|
@@ -44,7 +156,7 @@ Open `agent.py` and edit:
 | `choose_action(obs, memory)` | Every time it is your turn | Return one of `obs.legal_actions` |
 | `on_hand_end(result, memory)` | After every hand | Optional: learn from the result |
 
-`obs` holds everything you can see: your cards, the board, the pot, what you must call, the legal actions, and the action history. Every field is listed in the `choose_action` docstring.
+`Observation` in `game.py` defines the visible cards, pot, amount to call, legal actions and action history.
 
 Keep anything you want to remember in the `memory` dict. It is wiped at the start of each half. In the tournament, each half also runs in a **brand-new copy of your server**, so nothing at all carries over between halves. Locally, one process can play both halves and only `memory` is wiped (other global variables are **not**). Using `memory` makes your bot behave the same in both places.
 
@@ -109,7 +221,7 @@ The tournament builds **exactly that commit**. Anything you push afterwards is i
 
 ## 8. Rules your bot must follow
 - **Time:** **8 seconds of thinking per half** (1000 hands), which is roughly 4–7 ms per decision on average. Network time doesn't count: the first 1 ms of every request is free. A single decision may take at most **1 second**. If your time runs out, your bot plays check-or-fold for the rest of the half.
-- **Startup:** your server must be answering within **15 seconds** of starting. Do slow setup (like building lookup tables) at startup rather than during your first decision, but keep it under that limit. `agent.py` already calls `warmup()` at startup to build `omaha_score`'s table; put your own setup next to it. Your server starts once per half.
+- **Startup.** Your server must answer within **15 seconds** of starting. RiverCount prepares its evaluation tables once per server at startup.
 - **Errors:** crashing, returning something that is not an action, or making an illegal move each count as one error. After **5 errors in a half**, your bot **forfeits** that half, and **a forfeit loses the whole match** (0 points), whatever the chip count. A bot that never answers `/new-half` forfeits too. Every crash inside `on_hand_end()` counts as its own error, and finished hands arrive in batches, so one bug there can forfeit you within a few hands. Run `python -m pytest -q` to catch these. (Running out of time bank is **not** an error: your bot just checks or folds for the rest of the half.)
 - **Port:** the tournament sets the `PORT` environment variable. Keep the last lines of `agent.py` that read it, otherwise your agent's port is hardcoded and won't run on our evaluation pipeline.
 - **Hand results arrive late:** to save time, the judge delivers finished hands together with your next decision request. `on_hand_end()` still runs once per hand, always before `choose_action()` sees the next hand.

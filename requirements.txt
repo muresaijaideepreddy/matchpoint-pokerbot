@@ -1,2 +1,4 @@
 fastapi==0.156.1
 uvicorn==0.54.0
+numpy>=1.22
+httptools>=0.6

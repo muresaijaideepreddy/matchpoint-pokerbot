@@ -1,0 +1,68 @@
+{
+  "entrant": "MatchPoint",
+  "release_sha256": "e1e5fa89bfb302ae9dd2f7fa1b321838ebcc6c7e81d60676587af9cad6013762",
+  "archive_bytes": 2459148,
+  "archive_files": 72,
+  "platform": "linux/amd64",
+  "entry": "agent.py",
+  "official_smoke_script": "tools/smoke_test.py",
+  "official_smoke_sha256": "75666a4774878e2a327b0d8630b5ee86c64422ca52da5bc257b817818f654c8e",
+  "passed": true,
+  "startup_seconds_rounded": 0.3,
+  "startup_limit_seconds": 15,
+  "act_limit_seconds": 1,
+  "new_half_passed": true,
+  "hand_end_passed": true,
+  "action_probes": [
+    {
+      "situation": "preflop, button to act",
+      "action": "CHECK_CALL",
+      "elapsed_ms_rounded": 0
+    },
+    {
+      "situation": "preflop, facing a pot raise",
+      "action": "FOLD",
+      "elapsed_ms_rounded": 0
+    },
+    {
+      "situation": "flop, first to act",
+      "action": "CHECK_CALL",
+      "elapsed_ms_rounded": 0
+    },
+    {
+      "situation": "flop, facing an all-in (only FOLD or CHECK_CALL)",
+      "action": "CHECK_CALL",
+      "elapsed_ms_rounded": 0
+    },
+    {
+      "situation": "river, facing a half-pot bet",
+      "action": "CHECK_CALL",
+      "elapsed_ms_rounded": 0
+    }
+  ],
+  "container": {
+    "cpus": 1,
+    "memory_gib": 4,
+    "read_only": true,
+    "gpu_devices": 0,
+    "external_connectivity": false
+  },
+  "image_bytes": 334733800,
+  "base_image_bytes": 329228911,
+  "added_bytes": 5504889,
+  "added_bytes_limit": 3221225472,
+  "value_model": {
+    "file": "models/swirl_compact96.npz",
+    "sha256": "7e028b62affa45a3a89b309d65ee019725e3e34ff683e6a0e1751bf0b6d08dc3",
+    "features": 28,
+    "hidden_width": 96,
+    "all_parameters_support_mask_and_margin_match": true
+  },
+  "self_play_model": {
+    "file": "models/cfr_150k.npz",
+    "sha256": "e1d059f7d4d6fff3a59e9ca6824607ac4e4c6fa7e1a5b30d97847f4d71d192ac",
+    "all_loaded_entries_match": true,
+    "loaded_entries": 1541,
+    "min_visits": 40
+  }
+}

@@ -28,20 +28,21 @@ TOKEN = "test-token"
 AUTH = {"X-Agent-Token": TOKEN}
 
 
-def load_agent():
-    """Load a fresh copy of agent.py (its own MEMORY and globals)."""
-    spec = importlib.util.spec_from_file_location("agent_under_test", os.path.join(BUNDLE, "agent.py"))
+def load_agent(filename="agent.py"):
+    """Load a fresh entry point with its own match memory."""
+    spec = importlib.util.spec_from_file_location("agent_under_test", os.path.join(BUNDLE, filename))
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
 
 
-@pytest.fixture
-def bot():
+@pytest.fixture(params=["agent.py", "rivercount.py"])
+def bot(request):
     """(agent module, test client) with the tournament's token check switched on."""
-    module = load_agent()
+    module = load_agent(request.param)
     module.TOKEN = TOKEN
-    return module, TestClient(module.app)
+    with TestClient(module.app) as client:
+        yield module, client
 
 
 def start_half(client, half=1, seat=0):
@@ -133,7 +134,7 @@ def test_memory_is_fresh_each_half(bot):
     play_hands(client, 10)
     start_half(client, half=2, seat=1)
     after_reset = dict(module.MEMORY)
-    fresh = load_agent()
+    fresh = load_agent(os.path.basename(module.__file__))
     fresh.new_half(AgentConfig(), fresh.MEMORY)
     assert after_reset.keys() == fresh.MEMORY.keys(), "memory should only hold what new_half() puts there"
 
