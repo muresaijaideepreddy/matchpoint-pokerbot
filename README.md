@@ -4,6 +4,8 @@ MatchPoint is a Python bot for heads-up short-deck five-card pot-limit Omaha. In
 
 The game engine, referee, Docker recipes and starter opponents come from the TAMU Datathon Poker Bot Challenge. This fork adds the MatchPoint strategy, hand evaluation tables, training tools, checkpoints and experiments. [Organizer's starter repository](https://github.com/tamu-datathon-org/heads-up-bundle)
 
+Cloning this repository is sufficient to run the tournament bot. The release also includes the simulated training and evaluation replays, alternative model weights, and checksums. The research guide shows how to load the alternative models, including the residual network that achieved the lowest error on the blind test. [Research guide](experiments/research/README.md) · [Release assets](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/latest)
+
 The tournament starts `agent.py`. It serves MatchPoint with the Compact96 value model trained on Swirl and the 150,000-traversal self-play policy. `rivercount.py` preserves the original bot for head-to-head testing. Both use the tournament's exact two-hole-card and three-board-card rule.
 
 MatchPoint observes how often its opponent opens, reraises and folds. Against opponents who consistently open and reraise before the flop, it uses a policy learned through self-play. A compact neural policy estimates the value of each legal action against other common opponents. A Monte Carlo policy table handles opponents that raise almost every chance. Only observations from the current half affect the choice.

@@ -4,3 +4,6 @@ __pycache__/
 *.pyc
 dist/
 runs/
+/experiments/research/weights/
+/fresh/replay/
+/scaled/replay/
