@@ -1,8 +1,0 @@
-{
-  "model_sha256": "c4fe08dfa051ac950097a1bbe7f40978435ad0c09563ba5cfd3e06d9cba3f607",
-  "release": "a4c7f169b7a00ffbc3c142839f7082e2e960e09772268dd450331c6f4012a75b",
-  "independent_deals": 100663296,
-  "simulated_trajectories": 1207959552,
-  "elapsed_gpu_seconds": 564.1274277899938,
-  "peak_cuda_tensor_mib": 1079.419921875
-}

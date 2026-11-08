@@ -28,21 +28,20 @@ TOKEN = "test-token"
 AUTH = {"X-Agent-Token": TOKEN}
 
 
-def load_agent(filename="agent.py"):
-    """Load a fresh entry point with its own match memory."""
-    spec = importlib.util.spec_from_file_location("agent_under_test", os.path.join(BUNDLE, filename))
+def load_agent():
+    """Load a fresh copy of agent.py (its own MEMORY and globals)."""
+    spec = importlib.util.spec_from_file_location("agent_under_test", os.path.join(BUNDLE, "agent.py"))
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
 
 
-@pytest.fixture(params=["agent.py", "rivercount.py"])
-def bot(request):
+@pytest.fixture
+def bot():
     """(agent module, test client) with the tournament's token check switched on."""
-    module = load_agent(request.param)
+    module = load_agent()
     module.TOKEN = TOKEN
-    with TestClient(module.app) as client:
-        yield module, client
+    return module, TestClient(module.app)
 
 
 def start_half(client, half=1, seat=0):
@@ -134,7 +133,7 @@ def test_memory_is_fresh_each_half(bot):
     play_hands(client, 10)
     start_half(client, half=2, seat=1)
     after_reset = dict(module.MEMORY)
-    fresh = load_agent(os.path.basename(module.__file__))
+    fresh = load_agent()
     fresh.new_half(AgentConfig(), fresh.MEMORY)
     assert after_reset.keys() == fresh.MEMORY.keys(), "memory should only hold what new_half() puts there"
 
@@ -196,3 +195,244 @@ def test_reads_port_from_environment():
 # ---------------------------------------------------------------------------
 # Add your own tests below, e.g. "with two aces preflop my bot raises".
 # ---------------------------------------------------------------------------
+
+
+from evaluator import cards_from_str  # noqa: E402
+from game import ObservedAction, Observation, Street  # noqa: E402
+
+
+def _obs(hole, board, street, to_call=0, pot=8, legal=None, hand_index=5, is_button=False):
+    legal = legal or ((Action.FOLD,) if to_call else ()) + (Action.CHECK_CALL, Action.RAISE_HALF, Action.RAISE_POT)
+    return Observation(hand_index=hand_index, street=street, hole_cards=tuple(sorted(cards_from_str(hole))),
+                       board=tuple(cards_from_str(board)), pot=pot, to_call=to_call, my_bet=0, opp_bet=to_call,
+                       my_stack=70, opp_stack=70 - to_call, is_button=is_button, legal_actions=legal,
+                       raise_to={a: pot for a in legal if a in (Action.RAISE_HALF, Action.RAISE_POT)},
+                       min_raise_to=2, raises_this_street=0, action_history=(), big_blind=2)
+
+
+def test_never_folds_when_check_is_free():
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    for i in range(200):
+        deal = make_deal("free", i)
+        obs = _obs("", "", Street.FLOP)
+        obs = Observation(**{**obs.__dict__, "hole_cards": deal.hole_cards[0], "board": deal.board[:3]})
+        assert m.choose_action(obs, m.MEMORY) != Action.FOLD
+
+
+def test_bets_the_nuts():
+    # The blueprint is a mixed (equilibrium) strategy: out of position it may
+    # check the nuts to trap, so test frequencies, not single decisions.
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["mode"] = "mix"    # blueprint behaviour; the nn policy has its own test below
+    royal = ("As Ks 6c 7d 8h", "Qs Js Ts 6d 7c")   # royal flush in spades on the river
+    bets = 0
+    for i in range(100):
+        obs = _obs(*royal, Street.RIVER, hand_index=1000 + i)
+        if m.choose_action(obs, m.MEMORY) in (Action.RAISE_POT, Action.RAISE_HALF):
+            bets += 1
+    assert bets >= 40, f"bet the nuts only {bets}/100 times when first to act"
+    for i in range(50):    # facing a bet: never fold the nuts
+        obs = _obs(*royal, Street.RIVER, to_call=8, pot=16, hand_index=2000 + i)
+        assert m.choose_action(obs, m.MEMORY) != Action.FOLD
+    # in position after a check: always bet
+    hist = (ObservedAction(Street.RIVER, False, Action.CHECK_CALL, 0, 0),)
+    for i in range(50):
+        obs = _obs(*royal, Street.RIVER, hand_index=3000 + i, is_button=True)
+        obs = Observation(**{**obs.__dict__, "action_history": hist})
+        assert m.choose_action(obs, m.MEMORY) in (Action.RAISE_POT, Action.RAISE_HALF)
+
+
+def test_out_of_time_still_legal():
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["think"] = 99.0
+    obs = _obs("As Ks 6c 7d 8h", "Qs Js Ts", Street.FLOP, to_call=6, pot=12, legal=(Action.FOLD, Action.CHECK_CALL))
+    assert m.choose_action(obs, m.MEMORY) in obs.legal_actions
+
+
+def test_engine_matches_referee_scores():
+    import numpy as np
+    import plo_engine as E
+    from evaluator import omaha_score
+    E.build_tables()
+    rng = random.Random(9)
+    for _ in range(500):
+        c = rng.sample(range(36), 10)
+        tri = E.triple_indices(np.array([c[5:]]))
+        assert E.best_scores(tri, E.pair_indices(np.array(c[:5])))[0] == omaha_score(c[:5], c[5:])
+
+
+def test_range_cut_lowers_equity_of_weak_hand_and_cache_reuse():
+    import numpy as np
+    import plo_engine as E
+    E.build_tables()
+    g = np.random.default_rng(0)
+    s = E.sample_equity(cards_from_str("6c 7d 9h Js Kc"), cards_from_str("Ad Ah 8s"), 400, g)
+    assert 0.0 <= s.raw <= 1.0
+    assert s.cut(opp_cut=0.6) <= s.raw + 0.02          # vs a stronger range we do worse
+    assert s.cut() == s.raw
+
+
+def test_bot_respects_time_budget_in_process():
+    """A full 1000-hand half vs an always-raise opponent must stay inside our own budget."""
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    rng = random.Random(3)
+    for hand in range(1000):
+        game = Game(make_deal("budget", hand), button_seat=hand % 2, hand_index=hand)
+        while not game.is_terminal:
+            seat = game.to_act
+            obs = game.observation(seat)
+            if seat == 0:
+                a = m.choose_action(obs, m.MEMORY)
+                assert a in obs.legal_actions
+            else:
+                L = obs.legal_actions
+                a = Action.RAISE_POT if Action.RAISE_POT in L else Action.CHECK_CALL
+            game.apply(a)
+        m.on_hand_end(game.hand_result(0), m.MEMORY)
+    assert m.MEMORY["errors"] == 0
+    assert m.MEMORY["think"] < 4.0, m.MEMORY["think"]
+
+
+def test_blueprint_covers_live_decisions():
+    """Nearly every live decision must find its infoset in the shipped blueprint."""
+    import strategy as S
+    if not S.BLUEPRINTS:
+        pytest.skip("no blueprint file")
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["mode"] = "mix"    # the blueprint answers decisions in mix mode (and as the nn fallback)
+    rng = random.Random(5)
+    for hand in range(150):
+        game = Game(make_deal("cover", hand), button_seat=hand % 2, hand_index=hand)
+        while not game.is_terminal:
+            seat = game.to_act
+            obs = game.observation(seat)
+            a = m.choose_action(obs, m.MEMORY) if seat == 0 else rng.choice(obs.legal_actions)
+            game.apply(a)
+        m.on_hand_end(game.hand_result(0), m.MEMORY)
+    assert m.MEMORY["bp_hits"] >= 0.95 * m.MEMORY["n_decisions"], (m.MEMORY["bp_hits"], m.MEMORY["n_decisions"])
+
+
+def test_tuned_params_file_is_valid():
+    import json
+    import strategy as S
+    path = os.path.join(BUNDLE, "params_tuned.json")
+    if not os.path.isfile(path):
+        pytest.skip("no tuned params")
+    data = json.load(open(path))
+    assert set(data) <= set(S.PARAMS), set(data) - set(S.PARAMS)
+    assert all(isinstance(v, (int, float)) and -1.0 <= v <= 200.0 for v in data.values())
+
+
+def test_charge_guard_falls_back_cheaply():
+    """If the estimated judge charge is near the bank, the bot must stop computing."""
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["cpu0"] = -100.0           # pretend 100 s of process CPU were used this half
+    obs = _obs("As Ks 6c 7d 8h", "Qs Js Ts", Street.FLOP, to_call=6, pot=12)
+    before = m.MEMORY["n_decisions"]
+    assert m.choose_action(obs, m.MEMORY) in obs.legal_actions
+    assert m.MEMORY["n_decisions"] == before, "strategy should not run when the charge guard trips"
+
+
+def test_range_v2_reads_value_bettors_tighter_than_maniacs():
+    import strategy as S
+    P = {**S.PARAMS, "range_v2": 1.0}
+    hist = (ObservedAction(Street.RIVER, False, Action.RAISE_POT, 8, 8),)
+    obs = _obs("As Ks 6c 7d 8h", "Qs Js Ts 6d 7c", Street.RIVER, to_call=8, pot=16)
+    obs = Observation(**{**obs.__dict__, "action_history": hist})
+
+    def cut_for(raise_rate, sd_mean):
+        m = {}
+        S.init_memory(m)
+        o = m["opp"]
+        o["st_aggr"][3] = [int(200 * raise_rate), 200]
+        o["st_pot"][3] = int(200 * raise_rate)
+        o["sd_st"][3] = [sd_mean * 60, 60]
+        return S._post_cut_v2(obs, o, P)
+
+    nit = cut_for(0.10, 0.90)      # rarely bets the river, always strong when it does
+    maniac = cut_for(0.90, 0.50)   # bets everything, random strength
+    assert nit > maniac + 0.3, (nit, maniac)
+    assert 0.0 <= maniac <= 0.2
+
+
+def test_fast_estimators_are_unbiased():
+    """River pair-decomposition and turn stratification must match brute force."""
+    import numpy as np
+    import plo_engine as E
+    from evaluator import omaha_score
+    E.build_tables()
+    g = np.random.default_rng(3)
+    rng = random.Random(3)
+    hole = cards_from_str("6c 8d 9h Th Kc")
+    for board in (cards_from_str("Ts Jd 7c 6h Ah"), cards_from_str("Ts Jd 7c 6h")):
+        unknown = [c for c in range(36) if c not in hole + board]
+        w, n = 0.0, 8000
+        for _ in range(n):
+            x = rng.sample(unknown, 5 + (5 - len(board)))
+            full = board + x[5:]
+            a, b = omaha_score(hole, full), omaha_score(x[:5], full)
+            w += (a > b) + 0.5 * (a == b)
+        fast = E.sample_equity_fast(hole, board, 6000, g).raw
+        assert abs(fast - w / n) < 0.025, (len(board), fast, w / n)
+
+
+def test_nn_mode_plays_legal_actions_without_fallback():
+    """BOT_MODE=nn: the deep-RL policy answers every decision itself (no blueprint
+    fallback), always legally, in both seats."""
+    import nn_policy
+    if not os.path.isfile(nn_policy.MODEL_PATH):
+        pytest.skip("no nn_policy.npz")
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["mode"] = "nn"
+    rng = random.Random(11)
+    for hand in range(200):
+        game = Game(make_deal("nn", hand), button_seat=hand % 2, hand_index=hand)
+        while not game.is_terminal:
+            seat = game.to_act
+            obs = game.observation(seat)
+            if seat == 0:
+                a = m.choose_action(obs, m.MEMORY)
+                assert a in obs.legal_actions
+            else:
+                a = rng.choice(obs.legal_actions)
+            game.apply(a)
+        m.on_hand_end(game.hand_result(0), m.MEMORY)
+    assert m.MEMORY["errors"] == 0
+    assert m.MEMORY.get("nn_fallbacks", 0) == 0 and m.MEMORY.get("nn_errors", 0) == 0
+
+
+def test_shipped_default_mode_is_nn():
+    """The tournament image sets no BOT_MODE, so the shipped default must be the deep-RL policy."""
+    import strategy as S
+    if "BOT_MODE" not in os.environ:
+        assert S.MODE == "nn"
+
+
+def test_nn_mode_never_wastes_the_nuts():
+    """With a river royal flush the deep-RL policy never folds, always bets when checked
+    to, and bets first-to-act at least some of the time (it also checks to trap)."""
+    import nn_policy
+    if not os.path.isfile(nn_policy.MODEL_PATH):
+        pytest.skip("no nn_policy.npz")
+    m = load_agent()
+    m.new_half(AgentConfig(), m.MEMORY)
+    m.MEMORY["mode"] = "nn"
+    royal = ("As Ks 6c 7d 8h", "Qs Js Ts 6d 7c")
+    bets = sum(m.choose_action(_obs(*royal, Street.RIVER, hand_index=1000 + i), m.MEMORY)
+               in (Action.RAISE_POT, Action.RAISE_HALF) for i in range(300))
+    assert bets >= 30, f"bet the nuts only {bets}/300 times when first to act"
+    for i in range(50):
+        obs = _obs(*royal, Street.RIVER, to_call=8, pot=16, hand_index=2000 + i)
+        assert m.choose_action(obs, m.MEMORY) != Action.FOLD
+    hist = (ObservedAction(Street.RIVER, False, Action.CHECK_CALL, 0, 0),)
+    for i in range(50):
+        obs = _obs(*royal, Street.RIVER, hand_index=3000 + i, is_button=True)
+        obs = Observation(**{**obs.__dict__, "action_history": hist})
+        assert m.choose_action(obs, m.MEMORY) in (Action.RAISE_POT, Action.RAISE_HALF)

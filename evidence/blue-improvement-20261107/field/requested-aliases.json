@@ -1,9 +1,0 @@
-{
-  "ShortStackSage": {"status":"archived public snapshot","repo":"Dhanush006/ssd-heads-up-poker","slug":"current-dhanush006","reason":"GitHub returned 404 for the repository during the refreshed search. Last previously verified public opponent was tested separately."},
-  "td26": {"status":"repository name match only","repo":"Fargield/td26-poker-bot-v2","slug":"public-fargield","official_agent":"ShortDeckPLO-v1","participant":"TAMU-Datathon-CYH"},
-  "JustAsAwesomeAgent": {"status":"ambiguous public name","repos":["ArmaanMediratta/heads-up-bundle","akshajag/testpokerbot","tamu-datathon-org/heads-up-bundle"],"note":"Both distinct competing implementations and the shared starter appear separately in the field."},
-  "PocketEdge v2": {"status":"matching public entry","repo":"tylerpham89/poker-bot-heads-up-","slug":"public-tylerpham89"},
-  "Adaptive Equity": {"status":"matching public entry","repo":"andrewv426/timecasters-pokerbot","slug":"public-andrewv426"},
-  "DefeatEquity-v5": {"status":"no verified compatible public entry located"},
-  "BlueprintMix/CFR Blueprint": {"status":"exact label not verified","related_public_repo":"Dushyant-Betala/heads-up-bundle","slug":"public-dushyant-betala","official_agent":"Blueprint","participant":"byte_me","note":"The public implementation uses a CFR blueprint. No public challenge entry with literal BlueprintMix or CFR Blueprint name was located."}
-}

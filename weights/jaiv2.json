@@ -1,0 +1,4 @@
+{"name": "jaiv2", "bot": "hanuman / jai_poker", "source": "runs/jaiB2/ckpt_3500 (jaiB2 step 3500 = 6000 total steps; continues jaiv1 with 4x hands per step)",
+ "sha256_npz": "6baba7d7d7c4bd9839005f2c99b9e2f2a72b9bbd9676e4671e7bc88106346218", "image": "jaiv2:t", "saved": "2026-11-08 03:22:46 CST",
+ "trainer_gpu_eval_bb_per_hand": {"vs_jaiv1": "+0.46 (se 0.06)", "old_drl_pop3": "+0.43", "blueprint_clone": "+0.22", "revrange_clone": "+2.33", "team_cfr": "+0.30"},
+ "real_format_tested": false}
