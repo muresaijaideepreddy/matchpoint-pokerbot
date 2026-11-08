@@ -1,0 +1,5 @@
+{"name": "jaiv1", "bot": "hanuman / jai_poker", "source": "runs/jaiB/ckpt_2500 (jaiB, step 2500; from pop3 member m8)",
+ "sha256_npz": "73b229a9d389c0565553b2e549767d3380b1307ba174bcf6a3d5fbc9b4017fc7", "image": "jaiv1:t",
+ "saved": "2026-11-08 02:35:00 CST",
+ "real_format_test_JAI2": {"points": "57.5/81", "losses": 0, "blueprint": "0/10/0 +0.08", "old_drl": "5/5/0 +0.44",
+   "old_drl_bpresp": "2/4/0 +0.34", "matchpointv5": "4/2/0 +0.78", "revrange": "7/1/0 +1.00", "field": "6/1/0"}}
