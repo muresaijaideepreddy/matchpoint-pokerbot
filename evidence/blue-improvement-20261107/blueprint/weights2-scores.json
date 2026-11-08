@@ -1,0 +1,369 @@
+{
+  "arm": {
+    "label": "MatchPoint-SizeMix",
+    "archive": "efd5bdac1bf511083ec16ee09b3117932b2b348f9b0c3d3dc176277cca2ffb8b",
+    "tag": "mp-sizemix-archive:efd5bdac1bf51108",
+    "image_id": "sha256:b8144b50b34c55a09ed6238f291120d511c139fc0c49539eec9653ebcdbacdfe",
+    "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706"
+  },
+  "opponent": {
+    "slug": "public-dushyant-betala",
+    "repo": "Dushyant-Betala/heads-up-bundle",
+    "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+    "bot": "Blueprint",
+    "source_subdir": "",
+    "label": "public-dushyant-betala",
+    "tag": "mp-public-public-dushyant-betala:ba64c267aa2e",
+    "image_id": "sha256:5caaadc7de305967f2e2c46a52a1ce6dbf3c0202b80efef306ae3f6b88436498",
+    "base": "matchpoint-swirl-r49fku-base:check",
+    "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+    "files_sha256": {
+      "agent.py": "85a38b45e1c242bd350205d938c504bf3b0d7991b9663f8ececbb26547feeb47",
+      "bot_data/policies.npz": "f932a75ca1933a2f5feb1e9b61fddb917a5de0c58db565950b1d24aa78075d5b",
+      "bot_data/tables.npz": "eee80a29732aafaa29e4a622798f9a92655e1387d45534d9b01c03e176184747",
+      "brain.py": "8c6e86e750d55f31992e472cc578805312eab9d9a94a4dd6d0ea0a15fe180a8e",
+      "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+      "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+      "requirements.txt": "30c7368cf71fc526e5edbb47a3c51f37566b2b041cab5bea796fd71dae73ea95"
+    }
+  },
+  "plan_sha256": "e497c27069de5dc367a3344f8e9857d61475a5ba584081f139c95fb5f5b4adf2",
+  "summary": {
+    "wins": 0,
+    "draws": 28,
+    "losses": 12,
+    "points": 14.0,
+    "observed_loss_rate": 0.3,
+    "loss_rate_upper_one_sided95": 0.4402797377657307,
+    "bb_per_duplicate": -0.435975,
+    "ci95": [
+      -0.5430268748381347,
+      -0.3289231251618653
+    ],
+    "faults": 0,
+    "opponent_faults": 0,
+    "max_half_seconds": 0.029885
+  },
+  "rows": [
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-00",
+      "points": 0.5,
+      "bb_per_duplicate": -0.262,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.009186,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-01",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4055,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.013823,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-02",
+      "points": 0.0,
+      "bb_per_duplicate": -0.654,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.016723,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-03",
+      "points": 0.0,
+      "bb_per_duplicate": -0.899,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.010734,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-04",
+      "points": 0.5,
+      "bb_per_duplicate": 0.0925,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.007667,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-05",
+      "points": 0.5,
+      "bb_per_duplicate": 0.191,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.006815,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-06",
+      "points": 0.5,
+      "bb_per_duplicate": -0.61,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.016379,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-07",
+      "points": 0.5,
+      "bb_per_duplicate": -0.5075,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.0064,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-08",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4515,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.006835,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-09",
+      "points": 0.5,
+      "bb_per_duplicate": -0.275,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.005749,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-10",
+      "points": 0.5,
+      "bb_per_duplicate": -0.56,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.004928,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-11",
+      "points": 0.5,
+      "bb_per_duplicate": -0.498,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.011366,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-12",
+      "points": 0.0,
+      "bb_per_duplicate": -0.854,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.003147,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-13",
+      "points": 0.5,
+      "bb_per_duplicate": -0.233,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.005692,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-14",
+      "points": 0.5,
+      "bb_per_duplicate": -0.009,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.008779,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-15",
+      "points": 0.0,
+      "bb_per_duplicate": -0.757,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.00853,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-16",
+      "points": 0.5,
+      "bb_per_duplicate": 0.152,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.022359,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-17",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4635,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.017519,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-18",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4915,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.005367,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-19",
+      "points": 0.5,
+      "bb_per_duplicate": -0.497,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.011701,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-20",
+      "points": 0.0,
+      "bb_per_duplicate": -0.6855,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.003872,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-21",
+      "points": 0.5,
+      "bb_per_duplicate": 0.307,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.009242,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-22",
+      "points": 0.5,
+      "bb_per_duplicate": -0.336,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.009145,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-23",
+      "points": 0.5,
+      "bb_per_duplicate": -0.3645,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.006731,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-24",
+      "points": 0.5,
+      "bb_per_duplicate": -0.563,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.00974,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-25",
+      "points": 0.0,
+      "bb_per_duplicate": -0.905,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.01257,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-26",
+      "points": 0.0,
+      "bb_per_duplicate": -0.886,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.008719,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-27",
+      "points": 0.0,
+      "bb_per_duplicate": -0.6955,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.012559,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-28",
+      "points": 0.5,
+      "bb_per_duplicate": -0.0795,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.015547,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-29",
+      "points": 0.5,
+      "bb_per_duplicate": 0.2705,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.018236,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-30",
+      "points": 0.0,
+      "bb_per_duplicate": -0.7405,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.024133,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-31",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4995,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.023891,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-32",
+      "points": 0.5,
+      "bb_per_duplicate": -0.2695,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.023554,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-33",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4945,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.01909,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-34",
+      "points": 0.0,
+      "bb_per_duplicate": -0.9585,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.022449,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-35",
+      "points": 0.0,
+      "bb_per_duplicate": -0.778,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.024588,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-36",
+      "points": 0.0,
+      "bb_per_duplicate": -0.7735,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.021452,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-37",
+      "points": 0.5,
+      "bb_per_duplicate": -0.4625,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.016578,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-38",
+      "points": 0.5,
+      "bb_per_duplicate": -0.3595,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.01587,
+      "opponent_faults": 0
+    },
+    {
+      "seed": "bc40-c41aae9bb8939f618fe40449970c88ba-39",
+      "points": 0.5,
+      "bb_per_duplicate": -0.1735,
+      "entrant_faults": 0,
+      "max_half_seconds": 0.029885,
+      "opponent_faults": 0
+    }
+  ]
+}

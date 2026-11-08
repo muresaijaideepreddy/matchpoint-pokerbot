@@ -1,0 +1,46 @@
+{
+  "arm": "weights2",
+  "entrant": {
+    "label": "MatchPoint-SizeMix",
+    "archive": "efd5bdac1bf511083ec16ee09b3117932b2b348f9b0c3d3dc176277cca2ffb8b",
+    "tag": "mp-sizemix-archive:efd5bdac1bf51108",
+    "image_id": "sha256:b8144b50b34c55a09ed6238f291120d511c139fc0c49539eec9653ebcdbacdfe",
+    "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706"
+  },
+  "total": 1,
+  "completed": 1,
+  "wins": 1,
+  "draws": 0,
+  "losses": 0,
+  "points": 1.0,
+  "clean": 1,
+  "errors": {},
+  "rows": [
+    {
+      "repo": "Dhanush006/ssd-heads-up-poker",
+      "slug": "current-dhanush006",
+      "commit": "0f4f12c67c5ee116ade1ff4ae3eec6a34c08b668",
+      "seed": "blue-field-64272c90452f77d5efe7a083-1",
+      "opponent_image": "sha256:4b31d177884519bebc90f959c7aa6291bb316265d36de18882a2eda24d605632",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 1.389,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    }
+  ],
+  "mean_bb_per_deal": 1.389
+}

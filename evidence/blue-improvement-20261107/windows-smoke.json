@@ -1,0 +1,143 @@
+{
+  "archive": "MatchPoint-Weights3-Candidate.zip",
+  "sha256": "d944e836cd4d78552b5b2be92b682d9f5768ff3702f9e42c708071e212a9658a",
+  "bytes": 6745766,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "python": "3.13.7",
+  "device": "CPU",
+  "cuda_visible_devices": "-1",
+  "verified_provenance_file_count": 33,
+  "http_binding": "127.0.0.1 (ephemeral port)",
+  "identity": {
+    "participant": "PokerBot",
+    "agent_name": "MatchPoint"
+  },
+  "process_start_to_health_seconds": 3.223,
+  "official_http_checks": [
+    "ok  GET / answered after 0.0 s: PokerBot / MatchPoint",
+    "ok  POST /new-half worked",
+    "ok  /act preflop, button to act: CHECK_CALL in 3 ms",
+    "ok  /act preflop, facing a pot raise: FOLD in 3 ms",
+    "ok  /act flop, first to act: CHECK_CALL in 3 ms",
+    "ok  /act flop, facing an all-in (only FOLD or CHECK_CALL): CHECK_CALL in 3 ms",
+    "ok  /act river, facing a half-pot bet: CHECK_CALL in 3 ms",
+    "ok  POST /hand-end worked",
+    "SMOKE TEST PASSED"
+  ],
+  "http_smoke_passed": true,
+  "expert_validation": {
+    "forced_by": "synthetic observed betting frequencies and legal simulator observations",
+    "cases": [
+      {
+        "expert": "gpu",
+        "street": "PREFLOP",
+        "legally_available": [
+          "FOLD",
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "RAISE_HALF",
+        "weights2_action": "FOLD",
+        "actual_expert_calls": 1,
+        "legal_probes_until_override": 1
+      },
+      {
+        "expert": "gpu",
+        "street": "FLOP",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "RAISE_HALF",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 3,
+        "legal_probes_until_override": 3
+      },
+      {
+        "expert": "gpu",
+        "street": "TURN",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "CHECK_CALL",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 5,
+        "legal_probes_until_override": 5
+      },
+      {
+        "expert": "gpu",
+        "street": "RIVER",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "CHECK_CALL",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 7,
+        "legal_probes_until_override": 7
+      },
+      {
+        "expert": "field",
+        "street": "PREFLOP",
+        "legally_available": [
+          "FOLD",
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "RAISE_POT",
+        "weights2_action": "FOLD",
+        "actual_expert_calls": 1,
+        "legal_probes_until_override": 1
+      },
+      {
+        "expert": "field",
+        "street": "FLOP",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "CHECK_CALL",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 3,
+        "legal_probes_until_override": 3
+      },
+      {
+        "expert": "field",
+        "street": "TURN",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "CHECK_CALL",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 5,
+        "legal_probes_until_override": 5
+      },
+      {
+        "expert": "field",
+        "street": "RIVER",
+        "legally_available": [
+          "CHECK_CALL",
+          "RAISE_HALF",
+          "RAISE_POT"
+        ],
+        "returned": "CHECK_CALL",
+        "weights2_action": "CHECK_CALL",
+        "actual_expert_calls": 7,
+        "legal_probes_until_override": 7
+      }
+    ],
+    "gpu_runtime_imported": false,
+    "configured_startup_seconds": 15.0,
+    "configured_action_seconds": 1.0,
+    "configured_half_time_bank_seconds": 8.0
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "seed": "combo-dev-000",
+    "points": 0.5,
+    "bb": 0.9965,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-001",
+    "points": 0.5,
+    "bb": 0.8165,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-002",
+    "points": 0.5,
+    "bb": 0.565,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-003",
+    "points": 0.5,
+    "bb": -0.001,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-004",
+    "points": 1.0,
+    "bb": 1.0515,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-005",
+    "points": 0.5,
+    "bb": 0.474,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-006",
+    "points": 0.5,
+    "bb": 0.105,
+    "clean": true
+  },
+  {
+    "seed": "combo-dev-007",
+    "points": 0.5,
+    "bb": 0.5595,
+    "clean": true
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "step": 320,
+  "total_steps": 320,
+  "independent_deals_per_arm": 20971520,
+  "trajectories_per_arm": 251658240,
+  "arms": {
+    "neutral": {
+      "lambda_per_chip": 0.0,
+      "chip_mean": 0.560454249382019,
+      "chip_second_moment": 675.2220458984375,
+      "training_utility": 0.560454249382019
+    },
+    "risk0005": {
+      "lambda_per_chip": 0.0005,
+      "chip_mean": 0.596863329410553,
+      "chip_second_moment": 541.5927734375,
+      "training_utility": 0.32606691122055054
+    },
+    "risk001": {
+      "lambda_per_chip": 0.001,
+      "chip_mean": 0.39894193410873413,
+      "chip_second_moment": 401.605712890625,
+      "training_utility": -0.0026636719703674316
+    },
+    "risk003": {
+      "lambda_per_chip": 0.003,
+      "chip_mean": -0.2356300950050354,
+      "chip_second_moment": 118.96846008300781,
+      "training_utility": -0.5925354957580566
+    }
+  },
+  "elapsed_seconds": 448.84532999197836,
+  "cuda_peak_mib": 572.03515625,
+  "done": true,
+  "seed": 117910062,
+  "shared_cards_across_arms": true,
+  "objective": "E[X]-lambda*E[X^2], X is own terminal net chips; surrogate for duplicate score, not exact duplicate variance",
+  "model_sha256": {
+    "neutral": "8f0bbb2cb4ff98ca4382d641d0e79a5cff0032a2123d20cb0dbfee986b7a1c76",
+    "risk0005": "22cf880aba8c24d1039eb494b51c6fd8381e90c641003d8e6ad5b9892c68f375",
+    "risk001": "cfa43657e11aea3995317457a648a93131226e2fd109c52ae509da4b768bd3fc",
+    "risk003": "27d72c94288ef4ce7f832cd7a8f6156d5ca381f438fd3a669442dfc910604f99"
+  }
+}

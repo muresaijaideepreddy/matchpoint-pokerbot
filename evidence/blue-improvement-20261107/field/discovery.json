@@ -1,0 +1,298 @@
+{
+  "unique_repository_leads": 491,
+  "initial_public_search": {
+    "\"heads-up-bundle\" in:name,readme fork:true is:public": 16,
+    "\"short deck\" \"datathon\" in:name,description,readme fork:true is:public": 56,
+    "poker datathon created:2026-10-15..2026-11-09 fork:true is:public": 11,
+    "\"5-card\" \"TAMU\" poker in:readme fork:true is:public": 5,
+    "\"short deck\" \"Omaha\" in:readme created:2026-10-20..2026-11-09 fork:true is:public": 78,
+    "\"pot-limit\" \"datathon\" in:name,description,readme fork:true is:public": 54
+  },
+  "wide_search": {
+    "poker in:name created:2026-11-05..2026-11-08 fork:true is:public": 355,
+    "heads-up in:name created:2026-11-01..2026-11-08 fork:true is:public": 42,
+    "datathon in:name created:2026-11-06..2026-11-08 fork:true is:public": 76
+  },
+  "duplicates_of_shared_starter": [
+    "adityavsm/heads-up-bundle",
+    "imaas-goob/datathon",
+    "imaas-goob/headsupbot",
+    "itsoporo/datathon-poker-f26-winner",
+    "jait-mukkamalla/tamu-datathon-poker-bot-challenge",
+    "juan-sett/headsupbot",
+    "krishitam/reachforthemoon--headsup",
+    "nikhil-inja/heads-up-bundle",
+    "pablois0/heads-up-bundle",
+    "prunuus/heads-up",
+    "rtang311627/three-fourths",
+    "ruler10123/datathon-2026-poker-bot-challenge-submission",
+    "sploofie/f26-datathon-poker-bot"
+  ],
+  "tested_snapshots": [
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "commit": "8a21119372e2cf71cda87b932c3311f15068f5aa",
+      "slug": "public-650joshlee"
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "commit": "f452b09e8ebd6fd6eb9d17035f41e5b626712fcb",
+      "slug": "rematch-rangerunner-f452-native"
+    },
+    {
+      "repo": "AiWithAmman/heads-up-bundle-main",
+      "commit": "f5dd0c94f3dc9fadad7406eccdec61b91d8ee9e9",
+      "slug": "bf-aiwithamman-f5dd0c9"
+    },
+    {
+      "repo": "Aiyshwariya/poker-bot",
+      "commit": "2ba65a83546143c9ea78d50064dcea0b968026a1",
+      "slug": "public-aiyshwariya"
+    },
+    {
+      "repo": "akshajag/testpokerbot",
+      "commit": "910ff15c18baf8bf3fa81cdaaf5463bfec135791",
+      "slug": "public-akshajag"
+    },
+    {
+      "repo": "AllenChirayil/team-mustangs",
+      "commit": "766a71b2108d3645499c18182981c0c43bb12bc3",
+      "slug": "public-allenchirayil"
+    },
+    {
+      "repo": "alterj07/pokerbot",
+      "commit": "bc1f37338bc87e08c4dee9eb527de78e95c7feb5",
+      "slug": "current-alterj07"
+    },
+    {
+      "repo": "andrewv426/timecasters-pokerbot",
+      "commit": "54118d0c191efe5328bb36c7ff246b771e6d0002",
+      "slug": "public-andrewv426"
+    },
+    {
+      "repo": "ArmaanMediratta/heads-up-bundle",
+      "commit": "183342c61239b9df5db22e6fb2cf426d5e2df758",
+      "slug": "bf-armaanmediratta-183342c"
+    },
+    {
+      "repo": "awojinrin/xplore-heads-up-poker-bot",
+      "commit": "20784b7b73ad7b1d6fb5bc4b08c518ff719c184a",
+      "slug": "public-awojinrin"
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "commit": "c0114922f94845414288074843e78f6fec9749c9",
+      "slug": "public-burnerdrew2-prog"
+    },
+    {
+      "repo": "danjoelsahaya/MoonLily-HeadsUp",
+      "commit": "0e884ac7ce4c00bc5d00a0e4adf20e6098db2374",
+      "slug": "public-danjoelsahaya"
+    },
+    {
+      "repo": "DiegoAC06/heads-up-green-fn",
+      "commit": "1411024181e1e5a0b483ec0f4e44eded86b75bf9",
+      "slug": "bf-diegoac06-1411024"
+    },
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "commit": "37aee33524f901d4400ce48236da7fd1fc8e774e",
+      "slug": "bf-dimi1729-37aee33"
+    },
+    {
+      "repo": "dunlapjack/poker-bot",
+      "commit": "ad62dde16fb6e83a62e6cc0383da656db090055e",
+      "slug": "bf-dunlapjack-ad62dde"
+    },
+    {
+      "repo": "Dushyant-Betala/heads-up-bundle",
+      "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+      "slug": "public-dushyant-betala"
+    },
+    {
+      "repo": "Fargield/td26-poker-bot-v2",
+      "commit": "4ce02282e8e764766d183130d3c44b8af5d2760a",
+      "slug": "public-fargield"
+    },
+    {
+      "repo": "GetHub7163/Clanckers-Poker-Bot",
+      "commit": "a9b2e8ab81acadaf1d97b7897536ce9f63407667",
+      "slug": "bf-gethub7163-a9b2e8a"
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "commit": "085caedf7af6efdb8d76eb9c262404cf94fc6b3f",
+      "slug": "public-harishkumar123tamu"
+    },
+    {
+      "repo": "JadonLee8/datathon26-submission",
+      "commit": "285efeae764d17efbadbc76ac5c5cc7ebc0e3719",
+      "slug": "public-jadonlee8"
+    },
+    {
+      "repo": "jane-vo/tamu-datathon26",
+      "commit": "6453d2b72e0b10395185a21bc158b86eb4f8fbf3",
+      "slug": "bf-jane-vo-6453d2b"
+    },
+    {
+      "repo": "jiaxinglucasen/poker-bot",
+      "commit": "32e1662763e619e66de75d2b462aa26d6b7dd530",
+      "slug": "bf-jiaxinglucasen-32e1662"
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "commit": "48c22e690b095684496616cb447072b308d75162",
+      "slug": "current-junehwang0930-lang"
+    },
+    {
+      "repo": "karammasad/pokerMAKK",
+      "commit": "7e608edb3e8b34052c60115d9e8010ea7ee83229",
+      "slug": "bf-karammasad-7e608ed"
+    },
+    {
+      "repo": "kswamyget/pokerbot",
+      "commit": "8d5a5556a5089ba15e24dfcd85b24b93ff69d549",
+      "slug": "public-kswamyget"
+    },
+    {
+      "repo": "LaserRyan/Heads-Up-Poker",
+      "commit": "e00f6c866404c3f908509ffd4d5828754158b148",
+      "slug": "bf-laserryan-e00f6c8"
+    },
+    {
+      "repo": "malki-aal/heads-up-bundle",
+      "commit": "70ddc9555b7016898d2b9478e2f67590cc61ffaf",
+      "slug": "bf-malki-aal-70ddc95"
+    },
+    {
+      "repo": "Nave3425/poker-bot",
+      "commit": "252a8f3f96e0217997a6a0a1667d882514dde0cc",
+      "slug": "public-nave3425"
+    },
+    {
+      "repo": "oskarexists/heads_up_datathon_2026",
+      "commit": "5571729ae285bd2e534e0b09c77a83a95ad2899e",
+      "slug": "public-oskarexists"
+    },
+    {
+      "repo": "PayneAM/heads-up-bundle",
+      "commit": "16d7fa032ccd2f616528d41d007b86a9de1414f9",
+      "slug": "public-payneam"
+    },
+    {
+      "repo": "ruby22-gif/team-blackjack",
+      "commit": "8f15f20654f2e776f06ea69d9219546bd64bba64",
+      "slug": "public-ruby22-gif"
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "commit": "cf49c1ab68f0b1113218b1d955957cee37712d35",
+      "slug": "current-sahithreddy-github"
+    },
+    {
+      "repo": "sapyao/heads-up",
+      "commit": "0d540fa7518e8eb5a71878e2342af5aa9e3c8b0a",
+      "slug": "bf-sapyao-0d540fa"
+    },
+    {
+      "repo": "shaswat-singh23/datathon-poker",
+      "commit": "05c1a8ecadbb1186c94a670796905fff9d73fc8c",
+      "slug": "bf-shaswat-singh23-05c1a8e"
+    },
+    {
+      "repo": "shreynath/PitBossEquity",
+      "commit": "6b2921de93674e8600659540e307df5894b9e259",
+      "slug": "public-shreynath"
+    },
+    {
+      "repo": "shriharish1310/tamu-datathon-poker-bot",
+      "commit": "fd5c428475eee98edb7c38bd1e7fc0870ddbf42d",
+      "slug": "current-shriharish1310"
+    },
+    {
+      "repo": "snr2753423/heads-up-bot",
+      "commit": "1fefd42f8cf893f3bc0d9aadc926017ae4956e6c",
+      "slug": "bf-snr2753423-1fefd42"
+    },
+    {
+      "repo": "Solomon1493/heads-up-bot",
+      "commit": "a2a00571dd35d79d0815181a3c81944c903b9ffe",
+      "slug": "bf-solomon1493-a2a0057"
+    },
+    {
+      "repo": "someoneisarhino/tamu-datathon26",
+      "commit": "f81031252a30ea76c6c1e12fcea1b275e1ff8212",
+      "slug": "bf-someoneisarhino-f810312"
+    },
+    {
+      "repo": "tamu-datathon-org/heads-up-bundle",
+      "commit": "c83ab6eeb7660a2fd1fae7df224315d41fe985a9",
+      "slug": "current-tamu-datathon-org"
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "commit": "113dba584a2f48727436f0ad8b98d0271044932a",
+      "slug": "public-tylerpham89"
+    },
+    {
+      "repo": "ujjwalbana07/poker-bot",
+      "commit": "3a6a3c5104ba01b9abf4c78b43e2350dc2f6b586",
+      "slug": "bf-ujjwalbana07-3a6a3c5"
+    },
+    {
+      "repo": "Utsavdotcom/aura-farmer",
+      "commit": "e09a3a05fb3d31feac6125fae2bfd5fe8c621a1f",
+      "slug": "bf-utsavdotcom-e09a3a0"
+    },
+    {
+      "repo": "zeyad-commits/heads_up",
+      "commit": "33eb79e16af039227cc1d0c4c6a568aeccc93487",
+      "slug": "public-zeyad-commits"
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "commit": "16965ebd30dbc7a79bcbcc6f695b4c65fceaf727",
+      "slug": "bf-zuhairrr07-16965eb"
+    },
+    {
+      "repo": "isha1030/poker-bot-challenge",
+      "commit": "92b1cb71f0347bd446ee6636f2062245fdc74685",
+      "slug": "bfx-isha1030-poker-bot-challenge"
+    },
+    {
+      "repo": "RW-77/heads-up-dummy-calling-station",
+      "commit": "b7ddbb1ef2b3f5a04eb5ed028e9e678949dbec0c",
+      "slug": "bfx-rw-77-heads-up-dummy-calling-station"
+    },
+    {
+      "repo": "RW-77/heads-up-dummy-check-fold",
+      "commit": "4ba3f34fb0251332259c954cb09ee1ff52747d63",
+      "slug": "bfx-rw-77-heads-up-dummy-check-fold"
+    },
+    {
+      "repo": "RW-77/heads-up-dummy-pot-raiser",
+      "commit": "64e31ecfc7443a22b08f2445d458874bdbbeccdc",
+      "slug": "bfx-rw-77-heads-up-dummy-pot-raiser"
+    },
+    {
+      "repo": "RW-77/heads-up-dummy-random",
+      "commit": "8978ab09c541b1b1d038728f89c1035523348734",
+      "slug": "bfx-rw-77-heads-up-dummy-random"
+    },
+    {
+      "repo": "sydneyv1470/poker-bot",
+      "commit": "ccd52305175e9dd0a5a7dec68b888f9d7d6c2c50",
+      "slug": "bfx-sydneyv1470-poker-bot"
+    },
+    {
+      "repo": "Dhanush006/ssd-heads-up-poker",
+      "commit": "0f4f12c67c5ee116ade1ff4ae3eec6a34c08b668",
+      "slug": "current-dhanush006"
+    }
+  ],
+  "public_teams": 46,
+  "controls": 5,
+  "formerly_public_archive": 1,
+  "initial_snapshot_completed_utc": "2026-11-08T01:04:03.330921+00:00",
+  "expanded_snapshot_completed_utc": "2026-11-08T01:14:44.558249+00:00"
+}

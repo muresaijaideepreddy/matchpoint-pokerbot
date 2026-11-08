@@ -1,0 +1,574 @@
+{
+  "salt": "ccc5c07fd1de2d066b6be70e",
+  "played_hands_per_match": 2000,
+  "opponents": [
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "slug": "public-650joshlee",
+      "commit": "8a21119372e2cf71cda87b932c3311f15068f5aa",
+      "image_id": "sha256:2f55f642393a935868ea3b1ad9c48dcd8e74a7804c2b8c37c0ebe5576c0730aa",
+      "manifest": {
+        "slug": "public-650joshlee",
+        "repo": "650JoshLee/quad-j-jish",
+        "commit": "8a21119372e2cf71cda87b932c3311f15068f5aa",
+        "bot": "jish_4",
+        "source_subdir": "",
+        "runtime": "numba",
+        "label": "public-650joshlee",
+        "tag": "mp-public-public-650joshlee:8a21119372e2",
+        "image_id": "sha256:2f55f642393a935868ea3b1ad9c48dcd8e74a7804c2b8c37c0ebe5576c0730aa",
+        "base": "mp-public-runtime-numba:0.68.1",
+        "base_image": "sha256:4fbf093fb058eb8825ba48c174834cb23c8fc2c0db6018df8a3c013c781a0924",
+        "files_sha256": {
+          "agent.py": "6f776e99dc169a4af5eddb03e29593009f05d575b22cfe29f5e625a93b1526f6",
+          "data/preflop.npy": "695d95bb00f198badf9bf888775343770b3d7717674a5cac7e95e133d3eef90d",
+          "data/preflop_metadata.json": "c8fde7b2ae76fb657b49c5dc8ce9ea2aa258a46a828de1009a046ab76584fcff",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "requirements.txt": "254018ad62d56f87a89323b4b5c6d5a15c200ef27e85925d3ed57722fee43287"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-1"
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "slug": "rematch-rangerunner-f452-native",
+      "commit": "f452b09e8ebd6fd6eb9d17035f41e5b626712fcb",
+      "image_id": "sha256:78639d9ee4c3e92fa873b05140c774dedd8ae833c618bdb1e124fee3327565ee",
+      "manifest": {
+        "label": "RangeRunner",
+        "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+        "commit": "f452b09e8ebd6fd6eb9d17035f41e5b626712fcb",
+        "agent_blob": "bb37d21408c81728c0fc3fa985daa4de84038616",
+        "tag": "mp-r2-public-rematch-rangerunner-f452-native:f452b09e8ebd",
+        "image_id": "sha256:78639d9ee4c3e92fa873b05140c774dedd8ae833c618bdb1e124fee3327565ee",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy>=1.26,<2.5\nnumba==0.65.1\n",
+        "slug": "rematch-rangerunner-f452-native",
+        "base": "mp-public-runtime-numba:0.65.1",
+        "base_image": "sha256:c7ab18817329c77434be67979420d0f7203d433ed18440f12f5793f6ff56fc1b",
+        "probe": {
+          "participant": "winner",
+          "agent_name": "RangeRunner",
+          "backend": "portable C",
+          "table_keys": 19998,
+          "numpy": "2.4.6",
+          "numba": "0.65.1",
+          "hands": 40,
+          "actual_actions": {
+            "CHECK_CALL": 96,
+            "RAISE_HALF": 24,
+            "RAISE_POT": 40
+          },
+          "kernel_calls": {
+            "simulate": 320,
+            "preflop_equity": 120,
+            "preflop_quality": 40,
+            "score": 240
+          },
+          "fallback_calls": {}
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-2"
+    },
+    {
+      "repo": "AiWithAmman/heads-up-bundle-main",
+      "slug": "bf-aiwithamman-f5dd0c9",
+      "commit": "f5dd0c94f3dc9fadad7406eccdec61b91d8ee9e9",
+      "image_id": "sha256:87c54dcd65147f75171247b02d15d77c1ec5003934c135ca72a6301fb3e07a11",
+      "manifest": {
+        "label": "AiWithAmman/heads-up-bundle-main",
+        "repo": "AiWithAmman/heads-up-bundle-main",
+        "commit": "f5dd0c94f3dc9fadad7406eccdec61b91d8ee9e9",
+        "agent_blob": "6f274ce36ecaf7f5103dd9d790d0be174a99ef27",
+        "tag": "mp-r2-public-bf-aiwithamman-f5dd0c9:f5dd0c94f3dc",
+        "image_id": "sha256:87c54dcd65147f75171247b02d15d77c1ec5003934c135ca72a6301fb3e07a11",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-3"
+    },
+    {
+      "repo": "Aiyshwariya/poker-bot",
+      "slug": "public-aiyshwariya",
+      "commit": "2ba65a83546143c9ea78d50064dcea0b968026a1",
+      "image_id": "sha256:3950326198a0e94a8da270fdac94b337443f6b9e43bc0e4d07f533852219f8d1",
+      "manifest": {
+        "slug": "public-aiyshwariya",
+        "repo": "Aiyshwariya/poker-bot",
+        "commit": "2ba65a83546143c9ea78d50064dcea0b968026a1",
+        "bot": "RangeRover",
+        "source_subdir": "",
+        "label": "public-aiyshwariya",
+        "tag": "mp-public-public-aiyshwariya:2ba65a835461",
+        "image_id": "sha256:3950326198a0e94a8da270fdac94b337443f6b9e43bc0e4d07f533852219f8d1",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "93ce46e3e796510c6ba466b447209202ceabefcd6d89d6c8143b9bb67ddc11ba",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "preflop_table.json": "e564cad6ec059ad754a0ada71404a45655f01ba2c5f43b92d6413367cd120813",
+          "requirements.txt": "5dcc7f7e055be6ada8bec3c31d4a507075882c31ca0f89ba89eb2596a7d41df7",
+          "strategy.py": "6c0512ea57a797153dfab726cf8d817773fb9f50f911c5bf06917294e8ac8db2"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-4"
+    },
+    {
+      "repo": "akshajag/testpokerbot",
+      "slug": "public-akshajag",
+      "commit": "910ff15c18baf8bf3fa81cdaaf5463bfec135791",
+      "image_id": "sha256:8059480a87b0bccd7f637c6cffe548faa98bd7123b5ecc8a8a6d1594991fa765",
+      "manifest": {
+        "label": "public-akshajag",
+        "repo": "akshajag/testpokerbot",
+        "commit": "910ff15c18baf8bf3fa81cdaaf5463bfec135791",
+        "agent_blob": "903232fe9044528283a099f73929185d5e33a32a",
+        "tag": "mp-r2-public-public-akshajag:910ff15c18ba",
+        "image_id": "sha256:8059480a87b0bccd7f637c6cffe548faa98bd7123b5ecc8a8a6d1594991fa765",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy>=1.24\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-5"
+    },
+    {
+      "repo": "AllenChirayil/team-mustangs",
+      "slug": "public-allenchirayil",
+      "commit": "766a71b2108d3645499c18182981c0c43bb12bc3",
+      "image_id": "sha256:5df29b5a1b003147e25cb04539c1930e1e84de4ac8fe316494f4af7671f80ae6",
+      "manifest": {
+        "slug": "public-allenchirayil",
+        "repo": "AllenChirayil/team-mustangs",
+        "commit": "766a71b2108d3645499c18182981c0c43bb12bc3",
+        "bot": "Stallion",
+        "source_subdir": "",
+        "label": "public-allenchirayil",
+        "tag": "mp-public-public-allenchirayil:766a71b2108d",
+        "image_id": "sha256:5df29b5a1b003147e25cb04539c1930e1e84de4ac8fe316494f4af7671f80ae6",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "a3e50b4540eae051d534b73405a4956ea634be2efd712e9c5f353b08bbda6519",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "preflop_model.json": "0c9a113820cb5019b8f1e2ede0774f39557519178808a9ba2c8f529ddbbd8642",
+          "requirements.txt": "30c7368cf71fc526e5edbb47a3c51f37566b2b041cab5bea796fd71dae73ea95"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-6"
+    },
+    {
+      "repo": "andrewv426/timecasters-pokerbot",
+      "slug": "public-andrewv426",
+      "commit": "54118d0c191efe5328bb36c7ff246b771e6d0002",
+      "image_id": "sha256:70d04e5867e7afc521800187d67bde038c69c240e8ae64f01be1be6a2dc71deb",
+      "manifest": {
+        "slug": "public-andrewv426",
+        "repo": "andrewv426/timecasters-pokerbot",
+        "commit": "54118d0c191efe5328bb36c7ff246b771e6d0002",
+        "bot": "andrewv426",
+        "source_subdir": "",
+        "label": "public-andrewv426",
+        "tag": "mp-public-public-andrewv426:54118d0c191e",
+        "image_id": "sha256:70d04e5867e7afc521800187d67bde038c69c240e8ae64f01be1be6a2dc71deb",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "126639299892cfa7ece794a910e9bc7b8868c1a6bebcb4b3282ebcf1b4d3233d",
+          "bot_equity.py": "b4c45118c91ef3302434f3feb3b25c9ff25e41e971c19989942ff6e1bc38835d",
+          "bot_policy.py": "51f8c930cfbcb634027c001ba3378f1b022ae4a21cc4fff2bb7c366547435774",
+          "data/preflop.npz": "1af747ee9cdc9aa0da27473d61e187d2bf7845ac4d2bc03bcc5e64b0630e1de3",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "opponent_model.py": "769c927bc0a2497c2b6c00249d59bb2ba923ac61f3b927c76c0067adfd142f9e",
+          "requirements.txt": "3f0dc0250702edcbe9d6983f9367a748cb4ce1dc0ddfa6f4d7cc14ccaa5caeca"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-7"
+    },
+    {
+      "repo": "ArmaanMediratta/heads-up-bundle",
+      "slug": "bf-armaanmediratta-183342c",
+      "commit": "183342c61239b9df5db22e6fb2cf426d5e2df758",
+      "image_id": "sha256:09d4a974f711be502e107815c9312f68891aef3405974552cba8624db5ea94f9",
+      "manifest": {
+        "label": "ArmaanMediratta/heads-up-bundle",
+        "repo": "ArmaanMediratta/heads-up-bundle",
+        "commit": "183342c61239b9df5db22e6fb2cf426d5e2df758",
+        "agent_blob": "b75c11f23790a4434a440531a7b0dff1906d00a7",
+        "tag": "mp-r2-public-bf-armaanmediratta-183342c:183342c61239",
+        "image_id": "sha256:09d4a974f711be502e107815c9312f68891aef3405974552cba8624db5ea94f9",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-8"
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "slug": "public-burnerdrew2-prog",
+      "commit": "c0114922f94845414288074843e78f6fec9749c9",
+      "image_id": "sha256:5d082a899ed58e97cab9a1ae6793e267ed12ca7100878d237145256ad0d5ca0c",
+      "manifest": {
+        "slug": "public-burnerdrew2-prog",
+        "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+        "commit": "c0114922f94845414288074843e78f6fec9749c9",
+        "bot": "sdplo_v3",
+        "label": "public-burnerdrew2-prog",
+        "tag": "mp-public-public-burnerdrew2-prog:c0114922f948",
+        "image_id": "sha256:5d082a899ed58e97cab9a1ae6793e267ed12ca7100878d237145256ad0d5ca0c",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "d6e456569761499015e3f3dbe7e45d29ab7067cc59bf7ff645578d1cb17c16c5",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "sdplo/__init__.py": "6cfe6ab893828b185e4b96b14fdc9cfc98c7b3ba57ab13f2ce491cb7180586e8",
+          "sdplo/cards.py": "3a8de72c1028028d67d50eaaf82f8b79b62ebcde688ab8961824fc50dd136123",
+          "sdplo/evaluator.py": "4c2e2011e01bd245a2ff41e1454f06aa3d67353757027d022c74611a8becc93e",
+          "sdplo_strategy/__init__.py": "3acc5cda9d3719795abb2cb33ec4dcf387406e091db05ac293663aceb4f24726",
+          "sdplo_strategy/adapter.py": "b960adbea0af1a1c1a738555fb7428af2237888cf9a097ccf4c07632e818088b",
+          "sdplo_strategy/bot.py": "636c2a4c5ac8fcfa25d2c686af5c47042088a9dd4b2b6aa5243343cc08021995",
+          "sdplo_strategy/cards.py": "03058cae4f43359f42b695ffe79d6edbda66272f48b758b189427027b45cce2e",
+          "sdplo_strategy/data/preflop_bands_tbs1_fbfh1.npz": "4af1e0e9cd6bc55e21fe61f135c3f1a55123e680f37be4cff0d1a4f6681b1c3a",
+          "sdplo_strategy/data/preflop_table.npz": "aa362636cc6358f14895aadac76e82fcaf61dbf50266a7bee67e9d845a21a16e",
+          "sdplo_strategy/data/preflop_table_tbs1_fbfh1.npz": "175c8e1f5a607cc5fe9109a4cd2f9609ea961edb31c7c83eee0b7b8dfeab60fc",
+          "sdplo_strategy/decision.py": "7c65941f67634490c353f2660288d046c09bdb92fe4510857e0506db838be5b7",
+          "sdplo_strategy/equity.py": "045cb5e83747ae68973e41ec3d0084c755d792d1b51263ce05bf76e57dd84ae0",
+          "sdplo_strategy/history.py": "7ca12718cb50824b4cad1341dea9fdd061e79490dbbe8f839ae165368134cdd4",
+          "sdplo_strategy/likelihood.py": "d4bc192ede0db4bcca17e31d0c6ba877b7fa8aeae2f1ee7d81b8b6e11f32a374",
+          "sdplo_strategy/official.py": "a3df27b59c1ac1998d9dc93b6e242517afa13d4600487f36986e327ce317c606",
+          "sdplo_strategy/opponent.py": "8ab77028f1526c1960fa1da9690eef0a665cb232282a7f303261338214d89c35",
+          "sdplo_strategy/preflop.py": "56503d562822d63d97801ce986afb4a1a032df33eb503b87b3756c68ee69bf23",
+          "sdplo_strategy/ranges.py": "84ac9fce7cc854cad16c158e216a2370594f6cca526d62cfecbc334c53c497c5",
+          "sdplo_strategy/settings.py": "a4eefb96bdb7b612f9c7f333d230ff1e11889f0124fd7d5854fed27671b243ca",
+          "sdplo_strategy/types.py": "c95fa8648c62f08a11fea11c1456a907a6b52302027df3d5ab1d3ae643bf2484"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-9"
+    },
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "slug": "bf-dimi1729-37aee33",
+      "commit": "37aee33524f901d4400ce48236da7fd1fc8e774e",
+      "image_id": "sha256:264b2cf17abf8e69ec5f76aa774d356429a050dd33187532c2d44b090f4c254f",
+      "manifest": {
+        "label": "dimi1729/2026_datathon_poker",
+        "repo": "dimi1729/2026_datathon_poker",
+        "commit": "37aee33524f901d4400ce48236da7fd1fc8e774e",
+        "agent_blob": "ebecb731ea06918dcae3d1cfbd48bd5228540199",
+        "tag": "mp-r2-public-bf-dimi1729-37aee33:37aee33524f9",
+        "image_id": "sha256:264b2cf17abf8e69ec5f76aa774d356429a050dd33187532c2d44b090f4c254f",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy  # already in the base image; no version so it is reused\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-10"
+    },
+    {
+      "repo": "Dushyant-Betala/heads-up-bundle",
+      "slug": "public-dushyant-betala",
+      "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+      "image_id": "sha256:5caaadc7de305967f2e2c46a52a1ce6dbf3c0202b80efef306ae3f6b88436498",
+      "manifest": {
+        "slug": "public-dushyant-betala",
+        "repo": "Dushyant-Betala/heads-up-bundle",
+        "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+        "bot": "Blueprint",
+        "source_subdir": "",
+        "label": "public-dushyant-betala",
+        "tag": "mp-public-public-dushyant-betala:ba64c267aa2e",
+        "image_id": "sha256:5caaadc7de305967f2e2c46a52a1ce6dbf3c0202b80efef306ae3f6b88436498",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "85a38b45e1c242bd350205d938c504bf3b0d7991b9663f8ececbb26547feeb47",
+          "bot_data/policies.npz": "f932a75ca1933a2f5feb1e9b61fddb917a5de0c58db565950b1d24aa78075d5b",
+          "bot_data/tables.npz": "eee80a29732aafaa29e4a622798f9a92655e1387d45534d9b01c03e176184747",
+          "brain.py": "8c6e86e750d55f31992e472cc578805312eab9d9a94a4dd6d0ea0a15fe180a8e",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "requirements.txt": "30c7368cf71fc526e5edbb47a3c51f37566b2b041cab5bea796fd71dae73ea95"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-11"
+    },
+    {
+      "repo": "Fargield/td26-poker-bot-v2",
+      "slug": "public-fargield",
+      "commit": "4ce02282e8e764766d183130d3c44b8af5d2760a",
+      "image_id": "sha256:661dc4c16bbf5869eff9c582ba4e4f2e9bb12e43c3fb6430e4c6db7d6b8fe987",
+      "manifest": {
+        "slug": "public-fargield",
+        "repo": "Fargield/td26-poker-bot-v2",
+        "commit": "4ce02282e8e764766d183130d3c44b8af5d2760a",
+        "bot": "ShortDeckPLO-v1",
+        "label": "public-fargield",
+        "tag": "mp-public-public-fargield:4ce02282e8e7",
+        "image_id": "sha256:661dc4c16bbf5869eff9c582ba4e4f2e9bb12e43c3fb6430e4c6db7d6b8fe987",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "71bd7e7dd8ac2e5782df67b5b593017fd1469818549229a69ebb1b13fb0bfcec",
+          "data/preflop.npy": "8a946835ee590dd1229010ba74a7c95beb9722dea51971211522a3a0316ebc49",
+          "equity.py": "9f867e0681cd626493301bb2a1429dcb02c06071ccb6c9922acf5a49fed6d084",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "opponent.py": "a5bd349603f8f773882ca235c857a35950442d1ac78d5df92ff437a1392eeecc",
+          "range_equity.py": "1dbb5c27971ea05f255705cddff69f0396db2449d65f17eeec62e474ee6d85b4",
+          "strategy.py": "255f19f8830f81d857db03af98d84f23fcbca024372eca9d1035ac15a53ef06e"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-12"
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "slug": "public-harishkumar123tamu",
+      "commit": "085caedf7af6efdb8d76eb9c262404cf94fc6b3f",
+      "image_id": "sha256:0718efcb675d93ecd9d3b670417cac7ace5e01acefe71f7364046e03a3df9f37",
+      "manifest": {
+        "slug": "public-harishkumar123tamu",
+        "repo": "harishkumar123tamu/outliers",
+        "commit": "085caedf7af6efdb8d76eb9c262404cf94fc6b3f",
+        "bot": "outliers-bot",
+        "source_subdir": "",
+        "label": "public-harishkumar123tamu",
+        "tag": "mp-public-public-harishkumar123tamu:085caedf7af6",
+        "image_id": "sha256:0718efcb675d93ecd9d3b670417cac7ace5e01acefe71f7364046e03a3df9f37",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "ccc53273b2695ba8cd2e340722a17b0c06bbf99db83e8f490c5d5055aa024cfd",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "requirements.txt": "5dcc7f7e055be6ada8bec3c31d4a507075882c31ca0f89ba89eb2596a7d41df7"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-13"
+    },
+    {
+      "repo": "jiaxinglucasen/poker-bot",
+      "slug": "bf-jiaxinglucasen-32e1662",
+      "commit": "32e1662763e619e66de75d2b462aa26d6b7dd530",
+      "image_id": "sha256:03a5f48a7a51aecdb5b370787848a94bf6cf814ac112e761ee04b9c3f70d94e5",
+      "manifest": {
+        "label": "jiaxinglucasen/poker-bot",
+        "repo": "jiaxinglucasen/poker-bot",
+        "commit": "32e1662763e619e66de75d2b462aa26d6b7dd530",
+        "agent_blob": "a6f76405932f162f232b28c36635b865345805f1",
+        "tag": "mp-r2-public-bf-jiaxinglucasen-32e1662:32e1662763e6",
+        "image_id": "sha256:03a5f48a7a51aecdb5b370787848a94bf6cf814ac112e761ee04b9c3f70d94e5",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-14"
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "slug": "current-junehwang0930-lang",
+      "commit": "48c22e690b095684496616cb447072b308d75162",
+      "image_id": "sha256:4c8e9933d90809f07ea86d398aace3d355f770432b4a04585dba4b3a84f9f5b0",
+      "manifest": {
+        "label": "AdaptiveProfit",
+        "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+        "commit": "48c22e690b095684496616cb447072b308d75162",
+        "agent_blob": "2365d787acac6f200b409e7e7ba13bf2540a763b",
+        "tag": "mp-r2-public-current-junehwang0930-lang:48c22e690b09",
+        "image_id": "sha256:4c8e9933d90809f07ea86d398aace3d355f770432b4a04585dba4b3a84f9f5b0",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-15"
+    },
+    {
+      "repo": "karammasad/pokerMAKK",
+      "slug": "bf-karammasad-7e608ed",
+      "commit": "7e608edb3e8b34052c60115d9e8010ea7ee83229",
+      "image_id": "sha256:ae25381ad2f3121beb7440b20fadaf209e4ea759d7fac11425ba367f9fe0aeb2",
+      "manifest": {
+        "label": "karammasad/pokerMAKK",
+        "repo": "karammasad/pokerMAKK",
+        "commit": "7e608edb3e8b34052c60115d9e8010ea7ee83229",
+        "agent_blob": "6110a2cbb1757c6cc589744574c4cf2ed2bec0af",
+        "tag": "mp-r2-public-bf-karammasad-7e608ed:7e608edb3e8b",
+        "image_id": "sha256:ae25381ad2f3121beb7440b20fadaf209e4ea759d7fac11425ba367f9fe0aeb2",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-16"
+    },
+    {
+      "repo": "LaserRyan/Heads-Up-Poker",
+      "slug": "bf-laserryan-e00f6c8",
+      "commit": "e00f6c866404c3f908509ffd4d5828754158b148",
+      "image_id": "sha256:5edc67e2ce9ef6eacc8578eda17d867eb8d91c2f5b54da8c202169d9a29100d0",
+      "manifest": {
+        "label": "LaserRyan/Heads-Up-Poker",
+        "repo": "LaserRyan/Heads-Up-Poker",
+        "commit": "e00f6c866404c3f908509ffd4d5828754158b148",
+        "agent_blob": "72a509b6988e7c17cde5b6f4c2bade7d296ac616",
+        "tag": "mp-r2-public-bf-laserryan-e00f6c8:e00f6c866404",
+        "image_id": "sha256:5edc67e2ce9ef6eacc8578eda17d867eb8d91c2f5b54da8c202169d9a29100d0",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-17"
+    },
+    {
+      "repo": "oskarexists/heads_up_datathon_2026",
+      "slug": "public-oskarexists",
+      "commit": "5571729ae285bd2e534e0b09c77a83a95ad2899e",
+      "image_id": "sha256:2a3329fd66881d5c0d61631b0ac484ae83899efad6f94837dae5d532a598b057",
+      "manifest": {
+        "slug": "public-oskarexists",
+        "repo": "oskarexists/heads_up_datathon_2026",
+        "commit": "5571729ae285bd2e534e0b09c77a83a95ad2899e",
+        "bot": "Holey Donut",
+        "source_subdir": "",
+        "label": "public-oskarexists",
+        "tag": "mp-public-public-oskarexists:5571729ae285",
+        "image_id": "sha256:2a3329fd66881d5c0d61631b0ac484ae83899efad6f94837dae5d532a598b057",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "3edf4c19e99fff75f6816721eac83726ca20ebb8c135a05992913acae1d71c72",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "requirements.txt": "30c7368cf71fc526e5edbb47a3c51f37566b2b041cab5bea796fd71dae73ea95"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-18"
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "slug": "current-sahithreddy-github",
+      "commit": "cf49c1ab68f0b1113218b1d955957cee37712d35",
+      "image_id": "sha256:9a3204487859ceb6996a0bd4efcf0930527064bbd210e00df549b0ef12b455ee",
+      "manifest": {
+        "label": "RangeEquityBot-v3",
+        "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+        "commit": "cf49c1ab68f0b1113218b1d955957cee37712d35",
+        "agent_blob": "ade314be41442ec4a725e970ac2b705771c35940",
+        "tag": "mp-r2-public-current-sahithreddy-github:cf49c1ab68f0",
+        "image_id": "sha256:9a3204487859ceb6996a0bd4efcf0930527064bbd210e00df549b0ef12b455ee",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-19"
+    },
+    {
+      "repo": "sapyao/heads-up",
+      "slug": "bf-sapyao-0d540fa",
+      "commit": "0d540fa7518e8eb5a71878e2342af5aa9e3c8b0a",
+      "image_id": "sha256:6d7dc8dc1d0677e29ed7caba99050762701b1093f67d71361f103e260c8a6e64",
+      "manifest": {
+        "label": "sapyao/heads-up",
+        "repo": "sapyao/heads-up",
+        "commit": "0d540fa7518e8eb5a71878e2342af5aa9e3c8b0a",
+        "agent_blob": "38c677c76717fb125ff8dd8960bf1003c494ae3f",
+        "tag": "mp-r2-public-bf-sapyao-0d540fa:0d540fa7518e",
+        "image_id": "sha256:6d7dc8dc1d0677e29ed7caba99050762701b1093f67d71361f103e260c8a6e64",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-20"
+    },
+    {
+      "repo": "shaswat-singh23/datathon-poker",
+      "slug": "bf-shaswat-singh23-05c1a8e",
+      "commit": "05c1a8ecadbb1186c94a670796905fff9d73fc8c",
+      "image_id": "sha256:0a4058481e9c3c96e73d731c74de9c86fed4b4904f955ede5ad5c13d902eb50f",
+      "manifest": {
+        "label": "shaswat-singh23/datathon-poker",
+        "repo": "shaswat-singh23/datathon-poker",
+        "commit": "05c1a8ecadbb1186c94a670796905fff9d73fc8c",
+        "agent_blob": "5c0c20f6fee7d01be2bb7e5e9d4909657e7a609c",
+        "tag": "mp-r2-public-bf-shaswat-singh23-05c1a8e:05c1a8ecadbb",
+        "image_id": "sha256:0a4058481e9c3c96e73d731c74de9c86fed4b4904f955ede5ad5c13d902eb50f",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-21"
+    },
+    {
+      "repo": "sydneyv1470/poker-bot",
+      "slug": "bfx-sydneyv1470-poker-bot",
+      "commit": "ccd52305175e9dd0a5a7dec68b888f9d7d6c2c50",
+      "image_id": "sha256:cddc3187847a31d496bd1c78d5c88889bcd7a31788da537d8ea827c63ff05eb3",
+      "manifest": {
+        "label": "sydneyv1470/poker-bot",
+        "repo": "sydneyv1470/poker-bot",
+        "commit": "ccd52305175e9dd0a5a7dec68b888f9d7d6c2c50",
+        "agent_blob": "2aa96bee7b3410d569ed839ed07724439aa3d29b",
+        "tag": "mp-r2-public-bfx-sydneyv1470-poker-bot:ccd52305175e",
+        "image_id": "sha256:cddc3187847a31d496bd1c78d5c88889bcd7a31788da537d8ea827c63ff05eb3",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-22"
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "slug": "public-tylerpham89",
+      "commit": "113dba584a2f48727436f0ad8b98d0271044932a",
+      "image_id": "sha256:d70d489e456efe0d25c53a600bd7f91b6f5bb55375281ded89e358dceca44c86",
+      "manifest": {
+        "slug": "public-tylerpham89",
+        "repo": "tylerpham89/poker-bot-heads-up-",
+        "commit": "113dba584a2f48727436f0ad8b98d0271044932a",
+        "bot": "PocketEdge v2",
+        "label": "public-tylerpham89",
+        "tag": "mp-public-public-tylerpham89:113dba584a2f",
+        "image_id": "sha256:d70d489e456efe0d25c53a600bd7f91b6f5bb55375281ded89e358dceca44c86",
+        "base": "matchpoint-swirl-r49fku-base:check",
+        "base_image": "sha256:b57a5e3b816a3f3de3042fef6e3b434c792ac1b3d38937292097a45706773706",
+        "files_sha256": {
+          "agent.py": "3dae760584c1b49a85692217c3a494f0818f5c2fd5f8682ea7bc16bf0e138a0e",
+          "evaluator.py": "e2a151a4c41828a035030f490c91b81015d04bc209abfb860ca3d0dce649e0b4",
+          "fallback_strategy.py": "251e9d0122c6d9ddaf4a232639b02b869df986318caae249151759b0989bf5c2",
+          "game.py": "bc00e3c2d1bf64cbd36bf5553dae218767f11b20f388e5c417d989919877f2db",
+          "native/equity-linux-x86_64.so": "cce32bea37c5c2662d3c2e2036642aaa1c7c9732ca4e7acdf9f1cbcdef040ed7",
+          "native/equity.c": "3da6ab954dc6a51d18863e59787a8281f98b4cc231432acee54b768aef90048a",
+          "native_engine.py": "7e3095be44e3f1c8489776b7134059ab13983601c6d5fa173c6175299a5b4e74",
+          "preflop-model.json": "15561be68abe5720fbedd7e443914b50c1450260402dc669f9738e43e4724801",
+          "preflop.py": "0188813570bdb0a0d4542aee6a5e669e3638c43900425d846cd3aa0678c65ef5",
+          "strategy.py": "9f6f04afd32785813edf636d5d3f8c73573b12e8e18a98a469d4db80049f8cf9"
+        }
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-23"
+    },
+    {
+      "repo": "ujjwalbana07/poker-bot",
+      "slug": "bf-ujjwalbana07-3a6a3c5",
+      "commit": "3a6a3c5104ba01b9abf4c78b43e2350dc2f6b586",
+      "image_id": "sha256:7c24793fe76280fb453077705f242ed17681b94a2a04911d3645090450988b99",
+      "manifest": {
+        "label": "ujjwalbana07/poker-bot",
+        "repo": "ujjwalbana07/poker-bot",
+        "commit": "3a6a3c5104ba01b9abf4c78b43e2350dc2f6b586",
+        "agent_blob": "d3e3a0e5151cfae4df47e40e3a45aa78d5dfd933",
+        "tag": "mp-r2-public-bf-ujjwalbana07-3a6a3c5:3a6a3c5104ba",
+        "image_id": "sha256:7c24793fe76280fb453077705f242ed17681b94a2a04911d3645090450988b99",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-24"
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "slug": "bf-zuhairrr07-16965eb",
+      "commit": "16965ebd30dbc7a79bcbcc6f695b4c65fceaf727",
+      "image_id": "sha256:42736e4a032b409928d06b282ada6b9a3f7037c28ca6307164045a2263266015",
+      "manifest": {
+        "label": "zuhairrr07/Poker-Bot",
+        "repo": "zuhairrr07/Poker-Bot",
+        "commit": "16965ebd30dbc7a79bcbcc6f695b4c65fceaf727",
+        "agent_blob": "94e282cdce1aab6f1000a60755ea5cb7ca8cd3b5",
+        "tag": "mp-r2-public-bf-zuhairrr07-16965eb:16965ebd30db",
+        "image_id": "sha256:42736e4a032b409928d06b282ada6b9a3f7037c28ca6307164045a2263266015",
+        "build": "COPY only on organizer base; offline; no repository Dockerfile or installation scripts",
+        "requires": "fastapi==0.156.1\nuvicorn==0.54.0\nnumpy\n"
+      },
+      "seed": "blue-field-ccc5c07fd1de2d066b6be70e-25"
+    }
+  ]
+}

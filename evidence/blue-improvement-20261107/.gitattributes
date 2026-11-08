@@ -1,0 +1,3 @@
+# Preserve raw evidence byte hashes across Windows and Linux clones.
+*.json -text
+*.gz binary

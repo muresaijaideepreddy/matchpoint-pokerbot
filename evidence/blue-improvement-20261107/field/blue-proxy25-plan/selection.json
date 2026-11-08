@@ -1,0 +1,186 @@
+{
+  "rule": "25 lowest Weights 2 average BB per duplicate deal in the previous current public-team field, with repository name breaking ties",
+  "scale": "sum of official points in two independently seeded rounds divided by two; target 24.25/25",
+  "selected": [
+    {
+      "repo": "Dushyant-Betala/heads-up-bundle",
+      "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+      "slug": "public-dushyant-betala",
+      "selection_bb_per_deal": -0.6745,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-16"
+    },
+    {
+      "repo": "oskarexists/heads_up_datathon_2026",
+      "commit": "5571729ae285bd2e534e0b09c77a83a95ad2899e",
+      "slug": "public-oskarexists",
+      "selection_bb_per_deal": -0.2405,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-29"
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "commit": "16965ebd30dbc7a79bcbcc6f695b4c65fceaf727",
+      "slug": "bf-zuhairrr07-16965eb",
+      "selection_bb_per_deal": -0.1535,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-45"
+    },
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "commit": "8a21119372e2cf71cda87b932c3311f15068f5aa",
+      "slug": "public-650joshlee",
+      "selection_bb_per_deal": 0.1035,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-1"
+    },
+    {
+      "repo": "shaswat-singh23/datathon-poker",
+      "commit": "05c1a8ecadbb1186c94a670796905fff9d73fc8c",
+      "slug": "bf-shaswat-singh23-05c1a8e",
+      "selection_bb_per_deal": 0.2895,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-34"
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "commit": "c0114922f94845414288074843e78f6fec9749c9",
+      "slug": "public-burnerdrew2-prog",
+      "selection_bb_per_deal": 0.445,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-11"
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "commit": "48c22e690b095684496616cb447072b308d75162",
+      "slug": "current-junehwang0930-lang",
+      "selection_bb_per_deal": 0.823,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-23"
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "commit": "085caedf7af6efdb8d76eb9c262404cf94fc6b3f",
+      "slug": "public-harishkumar123tamu",
+      "selection_bb_per_deal": 0.8655,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-19"
+    },
+    {
+      "repo": "sapyao/heads-up",
+      "commit": "0d540fa7518e8eb5a71878e2342af5aa9e3c8b0a",
+      "slug": "bf-sapyao-0d540fa",
+      "selection_bb_per_deal": 0.9225,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-33"
+    },
+    {
+      "repo": "karammasad/pokerMAKK",
+      "commit": "7e608edb3e8b34052c60115d9e8010ea7ee83229",
+      "slug": "bf-karammasad-7e608ed",
+      "selection_bb_per_deal": 1.0,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-24"
+    },
+    {
+      "repo": "Fargield/td26-poker-bot-v2",
+      "commit": "4ce02282e8e764766d183130d3c44b8af5d2760a",
+      "slug": "public-fargield",
+      "selection_bb_per_deal": 1.032,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-17"
+    },
+    {
+      "repo": "jiaxinglucasen/poker-bot",
+      "commit": "32e1662763e619e66de75d2b462aa26d6b7dd530",
+      "slug": "bf-jiaxinglucasen-32e1662",
+      "selection_bb_per_deal": 1.0675,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-22"
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "commit": "f452b09e8ebd6fd6eb9d17035f41e5b626712fcb",
+      "slug": "rematch-rangerunner-f452-native",
+      "selection_bb_per_deal": 1.0735,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-2"
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "commit": "cf49c1ab68f0b1113218b1d955957cee37712d35",
+      "slug": "current-sahithreddy-github",
+      "selection_bb_per_deal": 1.0795,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-32"
+    },
+    {
+      "repo": "AllenChirayil/team-mustangs",
+      "commit": "766a71b2108d3645499c18182981c0c43bb12bc3",
+      "slug": "public-allenchirayil",
+      "selection_bb_per_deal": 1.1095,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-6"
+    },
+    {
+      "repo": "LaserRyan/Heads-Up-Poker",
+      "commit": "e00f6c866404c3f908509ffd4d5828754158b148",
+      "slug": "bf-laserryan-e00f6c8",
+      "selection_bb_per_deal": 1.1225,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-26"
+    },
+    {
+      "repo": "ArmaanMediratta/heads-up-bundle",
+      "commit": "183342c61239b9df5db22e6fb2cf426d5e2df758",
+      "slug": "bf-armaanmediratta-183342c",
+      "selection_bb_per_deal": 1.247,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-9"
+    },
+    {
+      "repo": "Aiyshwariya/poker-bot",
+      "commit": "2ba65a83546143c9ea78d50064dcea0b968026a1",
+      "slug": "public-aiyshwariya",
+      "selection_bb_per_deal": 1.3095,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-4"
+    },
+    {
+      "repo": "andrewv426/timecasters-pokerbot",
+      "commit": "54118d0c191efe5328bb36c7ff246b771e6d0002",
+      "slug": "public-andrewv426",
+      "selection_bb_per_deal": 1.373,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-8"
+    },
+    {
+      "repo": "akshajag/testpokerbot",
+      "commit": "910ff15c18baf8bf3fa81cdaaf5463bfec135791",
+      "slug": "public-akshajag",
+      "selection_bb_per_deal": 1.5385,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-5"
+    },
+    {
+      "repo": "ujjwalbana07/poker-bot",
+      "commit": "3a6a3c5104ba01b9abf4c78b43e2350dc2f6b586",
+      "slug": "bf-ujjwalbana07-3a6a3c5",
+      "selection_bb_per_deal": 1.548,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-42"
+    },
+    {
+      "repo": "sydneyv1470/poker-bot",
+      "commit": "ccd52305175e9dd0a5a7dec68b888f9d7d6c2c50",
+      "slug": "bfx-sydneyv1470-poker-bot",
+      "selection_bb_per_deal": 1.643,
+      "selection_seed": "blue-field-466fcedf939e6d70fc42d3d5-6"
+    },
+    {
+      "repo": "AiWithAmman/heads-up-bundle-main",
+      "commit": "f5dd0c94f3dc9fadad7406eccdec61b91d8ee9e9",
+      "slug": "bf-aiwithamman-f5dd0c9",
+      "selection_bb_per_deal": 1.6965,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-3"
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "commit": "113dba584a2f48727436f0ad8b98d0271044932a",
+      "slug": "public-tylerpham89",
+      "selection_bb_per_deal": 1.8225,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-41"
+    },
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "commit": "37aee33524f901d4400ce48236da7fd1fc8e774e",
+      "slug": "bf-dimi1729-37aee33",
+      "selection_bb_per_deal": 1.888,
+      "selection_seed": "blue-field-6683bb5778a082f2a5ed9963-14"
+    }
+  ],
+  "eligible": 46,
+  "block_sha256": {
+    "blue-proxy25-a": "8bcfb35a97f94bc02a360a44b15d6be2981d76f3242d36d6fc1d75d6e15c00ef",
+    "blue-proxy25-b": "f13c0c561debc1e5d06c145933d7ba77a53541ac46f78298cd5ced2ebe16dd0a"
+  }
+}

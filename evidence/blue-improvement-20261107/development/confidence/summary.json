@@ -1,0 +1,830 @@
+{
+  "frozen": {
+    "label": "largegpu",
+    "archive": "d944e836cd4d78552b5b2be92b682d9f5768ff3702f9e42c708071e212a9658a",
+    "tag": "matchpoint-combined:d944e836cd4d78",
+    "image_id": "sha256:0b5c3793397cc94e05f1a2dc6fc900a18f8d9021e1859320e21fd4d9591b9a99"
+  },
+  "candidate": {
+    "label": "confidence020",
+    "image_id": "sha256:d86d110103a21bb11cea696dd9c0bad93bebb5cb860fe2828df767573f934165",
+    "frozen_parent": "sha256:0b5c3793397cc94e05f1a2dc6fc900a18f8d9021e1859320e21fd4d9591b9a99",
+    "changed_file": "experiments/field_response/runtime.py",
+    "original_sha256": "3e89bcf36785ec99ae5974aebf8b730630b07c4693f75fb39cfcdfb672f9aea8",
+    "new_sha256": "be9dbdbc1b26481e794e907488a54b4f98a89a8a60514cdce8ab7fed3b36f776"
+  },
+  "rows": [
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-1",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 3.9185,
+      "narrow_bb": 3.689,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-2",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 2.955,
+      "narrow_bb": 1.335,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-3",
+      "frozen_points": 0.5,
+      "narrow_points": 0.5,
+      "frozen_bb": -0.5415,
+      "narrow_bb": 0.367,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-4",
+      "frozen_points": 0.5,
+      "narrow_points": 1.0,
+      "frozen_bb": 0.508,
+      "narrow_bb": 1.3545,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-5",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.453,
+      "narrow_bb": 3.895,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-6",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 3.996,
+      "narrow_bb": 3.9165,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-7",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.628,
+      "narrow_bb": 3.572,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-8",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 3.89,
+      "narrow_bb": 2.812,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "Utsavdotcom/aura-farmer",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-9",
+      "frozen_points": 1.0,
+      "narrow_points": 0.5,
+      "frozen_bb": 2.425,
+      "narrow_bb": -1.14,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "seed": "blue-field-d01e2a5d20887c6111747f0a-10",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 1.6925,
+      "narrow_bb": 1.5155,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "seed": "blue-field-3604a3eecc11cab834523050-1",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.1195,
+      "narrow_bb": 3.7615,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "seed": "blue-field-3604a3eecc11cab834523050-2",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.038,
+      "narrow_bb": 2.828,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "seed": "blue-field-3604a3eecc11cab834523050-3",
+      "frozen_points": 0.5,
+      "narrow_points": 0.5,
+      "frozen_bb": -0.207,
+      "narrow_bb": 0.434,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "seed": "blue-field-3604a3eecc11cab834523050-4",
+      "frozen_points": 0.5,
+      "narrow_points": 1.0,
+      "frozen_bb": 0.5465,
+      "narrow_bb": 1.6195,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "seed": "blue-field-3604a3eecc11cab834523050-5",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.0985,
+      "narrow_bb": 3.8545,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "seed": "blue-field-3604a3eecc11cab834523050-6",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 4.004,
+      "narrow_bb": 3.634,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "seed": "blue-field-3604a3eecc11cab834523050-7",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 3.149,
+      "narrow_bb": 2.493,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "seed": "blue-field-3604a3eecc11cab834523050-8",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "frozen_bb": 3.315,
+      "narrow_bb": 2.81,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "Utsavdotcom/aura-farmer",
+      "seed": "blue-field-3604a3eecc11cab834523050-9",
+      "frozen_points": 1.0,
+      "narrow_points": 0.0,
+      "frozen_bb": 3.7045,
+      "narrow_bb": -1.819,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "seed": "blue-field-3604a3eecc11cab834523050-10",
+      "frozen_points": 0.5,
+      "narrow_points": 1.0,
+      "frozen_bb": 0.025,
+      "narrow_bb": 1.458,
+      "clean": true,
+      "frozen_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      },
+      "narrow_faults": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    }
+  ],
+  "aggregate": [
+    {
+      "owner": "650joshlee",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -0.2937500000000002,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "junehwang0930-lang",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -0.22474999999999978,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "harishkumar123tamu",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -0.401,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "sahithreddy-github",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -0.8560000000000001,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "aashrithtutuku02-stack",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -1.4150000000000003,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "dimi1729",
+      "frozen_points": 1.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": 0.95975,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "zuhairrr07",
+      "frozen_points": 1.5,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": 0.6280000000000001,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "burnerdrew2-prog",
+      "frozen_points": 1.0,
+      "narrow_points": 1.0,
+      "chip_change_bb_per_deal": 0.77475,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "utsavdotcom",
+      "frozen_points": 2.0,
+      "narrow_points": 0.5,
+      "chip_change_bb_per_deal": -4.54425,
+      "clean_pairs": 2
+    },
+    {
+      "owner": "tylerpham89",
+      "frozen_points": 2.0,
+      "narrow_points": 2.0,
+      "chip_change_bb_per_deal": -0.7915000000000001,
+      "clean_pairs": 2
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "arm": "frozen",
+  "entrant": {
+    "label": "largegpu",
+    "archive": "d944e836cd4d78552b5b2be92b682d9f5768ff3702f9e42c708071e212a9658a",
+    "tag": "matchpoint-combined:d944e836cd4d78",
+    "image_id": "sha256:0b5c3793397cc94e05f1a2dc6fc900a18f8d9021e1859320e21fd4d9591b9a99"
+  },
+  "total": 10,
+  "completed": 10,
+  "wins": 7,
+  "draws": 3,
+  "losses": 0,
+  "points": 8.5,
+  "clean": 10,
+  "errors": {},
+  "rows": [
+    {
+      "repo": "dimi1729/2026_datathon_poker",
+      "slug": "bf-dimi1729-37aee33",
+      "commit": "37aee33524f901d4400ce48236da7fd1fc8e774e",
+      "seed": "blue-field-3604a3eecc11cab834523050-4",
+      "opponent_image": "sha256:264b2cf17abf8e69ec5f76aa774d356429a050dd33187532c2d44b090f4c254f",
+      "points": 0.5,
+      "verdict": "CHOP",
+      "bb_per_deal": 0.5465,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "Utsavdotcom/aura-farmer",
+      "slug": "bf-utsavdotcom-e09a3a0",
+      "commit": "e09a3a05fb3d31feac6125fae2bfd5fe8c621a1f",
+      "seed": "blue-field-3604a3eecc11cab834523050-9",
+      "opponent_image": "sha256:5ec7938e55e4a68c21a8fa48159e659ec49722b6f08070889e8f46a956635307",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 3.7045,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "zuhairrr07/Poker-Bot",
+      "slug": "bf-zuhairrr07-16965eb",
+      "commit": "16965ebd30dbc7a79bcbcc6f695b4c65fceaf727",
+      "seed": "blue-field-3604a3eecc11cab834523050-10",
+      "opponent_image": "sha256:42736e4a032b409928d06b282ada6b9a3f7037c28ca6307164045a2263266015",
+      "points": 0.5,
+      "verdict": "CHOP",
+      "bb_per_deal": 0.025,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "junehwang0930-lang/PokerBot-Team-quad-j",
+      "slug": "current-junehwang0930-lang",
+      "commit": "48c22e690b095684496616cb447072b308d75162",
+      "seed": "blue-field-3604a3eecc11cab834523050-6",
+      "opponent_image": "sha256:4c8e9933d90809f07ea86d398aace3d355f770432b4a04585dba4b3a84f9f5b0",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 4.004,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "SahithReddy-GitHub/poker-bot-tamu-datathon",
+      "slug": "current-sahithreddy-github",
+      "commit": "cf49c1ab68f0b1113218b1d955957cee37712d35",
+      "seed": "blue-field-3604a3eecc11cab834523050-7",
+      "opponent_image": "sha256:9a3204487859ceb6996a0bd4efcf0930527064bbd210e00df549b0ef12b455ee",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 3.149,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "650JoshLee/quad-j-jish",
+      "slug": "public-650joshlee",
+      "commit": "8a21119372e2cf71cda87b932c3311f15068f5aa",
+      "seed": "blue-field-3604a3eecc11cab834523050-1",
+      "opponent_image": "sha256:2f55f642393a935868ea3b1ad9c48dcd8e74a7804c2b8c37c0ebe5576c0730aa",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 4.1195,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "burnerdrew2-prog/tamu-heads-up-bot",
+      "slug": "public-burnerdrew2-prog",
+      "commit": "c0114922f94845414288074843e78f6fec9749c9",
+      "seed": "blue-field-3604a3eecc11cab834523050-3",
+      "opponent_image": "sha256:5d082a899ed58e97cab9a1ae6793e267ed12ca7100878d237145256ad0d5ca0c",
+      "points": 0.5,
+      "verdict": "CHOP",
+      "bb_per_deal": -0.207,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "harishkumar123tamu/outliers",
+      "slug": "public-harishkumar123tamu",
+      "commit": "085caedf7af6efdb8d76eb9c262404cf94fc6b3f",
+      "seed": "blue-field-3604a3eecc11cab834523050-5",
+      "opponent_image": "sha256:0718efcb675d93ecd9d3b670417cac7ace5e01acefe71f7364046e03a3df9f37",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 4.0985,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "tylerpham89/poker-bot-heads-up-",
+      "slug": "public-tylerpham89",
+      "commit": "113dba584a2f48727436f0ad8b98d0271044932a",
+      "seed": "blue-field-3604a3eecc11cab834523050-8",
+      "opponent_image": "sha256:d70d489e456efe0d25c53a600bd7f91b6f5bb55375281ded89e358dceca44c86",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 3.315,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    },
+    {
+      "repo": "aashrithtutuku02-stack/rangerunner-plo5",
+      "slug": "rematch-rangerunner-f452-native",
+      "commit": "f452b09e8ebd6fd6eb9d17035f41e5b626712fcb",
+      "seed": "blue-field-3604a3eecc11cab834523050-2",
+      "opponent_image": "sha256:78639d9ee4c3e92fa873b05140c774dedd8ae833c618bdb1e124fee3327565ee",
+      "points": 1.0,
+      "verdict": "AGENT1_WIN",
+      "bb_per_deal": 4.038,
+      "clean": true,
+      "stats": {
+        "entrant": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        },
+        "opponent": {
+          "errors": 0,
+          "skipped_calls": 0,
+          "forfeited": 0,
+          "timed_out": 0
+        }
+      }
+    }
+  ],
+  "mean_bb_per_deal": 2.6793
+}

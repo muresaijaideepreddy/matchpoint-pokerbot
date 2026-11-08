@@ -1,0 +1,595 @@
+{
+  "policies": [
+    {
+      "label": "baseline",
+      "win": 0,
+      "draw": 10,
+      "loss": 2,
+      "points": 5.0,
+      "mean_bb_per_deal": -0.32145833333333335,
+      "mean_sigma_bb_per_deal": 10.835223971655811,
+      "mean_win_threshold_bb_per_deal": 0.6715741394863662,
+      "matches": [
+        {
+          "seed": "blue-risk-test-01",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.1005,
+          "sigma_bb_per_deal": 10.862188402292002,
+          "win_threshold_bb_per_deal": 0.673245412212118
+        },
+        {
+          "seed": "blue-risk-test-02",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.3805,
+          "sigma_bb_per_deal": 10.808250924087488,
+          "win_threshold_bb_per_deal": 0.6699023326776277
+        },
+        {
+          "seed": "blue-risk-test-03",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.3865,
+          "sigma_bb_per_deal": 10.607374045169433,
+          "win_threshold_bb_per_deal": 0.6574518547313482
+        },
+        {
+          "seed": "blue-risk-test-04",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.154,
+          "sigma_bb_per_deal": 11.323935513571044,
+          "win_threshold_bb_per_deal": 0.7018647946751599
+        },
+        {
+          "seed": "blue-risk-test-05",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.0845,
+          "sigma_bb_per_deal": 11.576446945150048,
+          "win_threshold_bb_per_deal": 0.7175156153519405
+        },
+        {
+          "seed": "blue-risk-test-06",
+          "points": 0.0,
+          "verdict": "AGENT2_WIN",
+          "bb_per_deal": -0.838,
+          "sigma_bb_per_deal": 10.307594409099657,
+          "win_threshold_bb_per_deal": 0.6388713203874576
+        },
+        {
+          "seed": "blue-risk-test-07",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.552,
+          "sigma_bb_per_deal": 10.588149267218748,
+          "win_threshold_bb_per_deal": 0.6562602906489793
+        },
+        {
+          "seed": "blue-risk-test-08",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.581,
+          "sigma_bb_per_deal": 11.981631712688323,
+          "win_threshold_bb_per_deal": 0.7426292274290259
+        },
+        {
+          "seed": "blue-risk-test-09",
+          "points": 0.0,
+          "verdict": "AGENT2_WIN",
+          "bb_per_deal": -0.6425,
+          "sigma_bb_per_deal": 10.195312066736268,
+          "win_threshold_bb_per_deal": 0.63191198870687
+        },
+        {
+          "seed": "blue-risk-test-10",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.4995,
+          "sigma_bb_per_deal": 10.77937589541689,
+          "win_threshold_bb_per_deal": 0.6681126398588334
+        },
+        {
+          "seed": "blue-risk-test-11",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.3255,
+          "sigma_bb_per_deal": 10.68222400343953,
+          "win_threshold_bb_per_deal": 0.6620911032090285
+        },
+        {
+          "seed": "blue-risk-test-12",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.272,
+          "sigma_bb_per_deal": 10.310204475000305,
+          "win_threshold_bb_per_deal": 0.6390330939480057
+        }
+      ],
+      "paired_change_vs_unmodified": {
+        "bb_per_deal": -0.810875,
+        "ci95": [
+          -1.1744018682590216,
+          -0.4473481317409783
+        ]
+      }
+    },
+    {
+      "label": "detail31m",
+      "win": 2,
+      "draw": 10,
+      "loss": 0,
+      "points": 7.0,
+      "mean_bb_per_deal": 0.48941666666666667,
+      "mean_sigma_bb_per_deal": 13.9172059709269,
+      "mean_win_threshold_bb_per_deal": 0.8625973628629527,
+      "matches": [
+        {
+          "seed": "blue-risk-test-01",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.321,
+          "sigma_bb_per_deal": 13.918609366121556,
+          "win_threshold_bb_per_deal": 0.8626843461982927
+        },
+        {
+          "seed": "blue-risk-test-02",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.5735,
+          "sigma_bb_per_deal": 13.600176931296245,
+          "win_threshold_bb_per_deal": 0.8429476994098389
+        },
+        {
+          "seed": "blue-risk-test-03",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.485,
+          "sigma_bb_per_deal": 13.32609694771353,
+          "win_threshold_bb_per_deal": 0.8259600460298534
+        },
+        {
+          "seed": "blue-risk-test-04",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.203,
+          "sigma_bb_per_deal": 14.214018760692886,
+          "win_threshold_bb_per_deal": 0.8809940101678057
+        },
+        {
+          "seed": "blue-risk-test-05",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.745,
+          "sigma_bb_per_deal": 14.439632196769347,
+          "win_threshold_bb_per_deal": 0.8949776758110786
+        },
+        {
+          "seed": "blue-risk-test-06",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.578,
+          "sigma_bb_per_deal": 13.685584065402953,
+          "win_threshold_bb_per_deal": 0.8482412884250501
+        },
+        {
+          "seed": "blue-risk-test-07",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.051,
+          "sigma_bb_per_deal": 13.551089662127952,
+          "win_threshold_bb_per_deal": 0.8399052389459235
+        },
+        {
+          "seed": "blue-risk-test-08",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.1515,
+          "sigma_bb_per_deal": 14.579861800446537,
+          "win_threshold_bb_per_deal": 0.9036691966939304
+        },
+        {
+          "seed": "blue-risk-test-09",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.732,
+          "sigma_bb_per_deal": 14.215968829797347,
+          "win_threshold_bb_per_deal": 0.8811148767031162
+        },
+        {
+          "seed": "blue-risk-test-10",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.6375,
+          "sigma_bb_per_deal": 13.590292115690147,
+          "win_threshold_bb_per_deal": 0.8423350321911445
+        },
+        {
+          "seed": "blue-risk-test-11",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.254,
+          "sigma_bb_per_deal": 14.5568845185667,
+          "win_threshold_bb_per_deal": 0.9022450500084025
+        },
+        {
+          "seed": "blue-risk-test-12",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.2915,
+          "sigma_bb_per_deal": 13.328256456497607,
+          "win_threshold_bb_per_deal": 0.826093893770996
+        }
+      ],
+      "paired_change_vs_unmodified": {
+        "bb_per_deal": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "label": "risk025-detail31",
+      "win": 2,
+      "draw": 10,
+      "loss": 0,
+      "points": 7.0,
+      "mean_bb_per_deal": 0.453875,
+      "mean_sigma_bb_per_deal": 13.714402500120682,
+      "mean_win_threshold_bb_per_deal": 0.8500274735143044,
+      "matches": [
+        {
+          "seed": "blue-risk-test-01",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.512,
+          "sigma_bb_per_deal": 13.769475460396247,
+          "win_threshold_bb_per_deal": 0.8534409309566962
+        },
+        {
+          "seed": "blue-risk-test-02",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.6685,
+          "sigma_bb_per_deal": 13.998779360128996,
+          "win_threshold_bb_per_deal": 0.8676533339071776
+        },
+        {
+          "seed": "blue-risk-test-03",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.053,
+          "sigma_bb_per_deal": 12.875654293024237,
+          "win_threshold_bb_per_deal": 0.79804132104528
+        },
+        {
+          "seed": "blue-risk-test-04",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.3265,
+          "sigma_bb_per_deal": 14.283983335538093,
+          "win_threshold_bb_per_deal": 0.8853304594437147
+        },
+        {
+          "seed": "blue-risk-test-05",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.8385,
+          "sigma_bb_per_deal": 13.830471781530076,
+          "win_threshold_bb_per_deal": 0.8572215221087057
+        },
+        {
+          "seed": "blue-risk-test-06",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.09,
+          "sigma_bb_per_deal": 13.82885162033121,
+          "win_threshold_bb_per_deal": 0.8571211034772309
+        },
+        {
+          "seed": "blue-risk-test-07",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.687,
+          "sigma_bb_per_deal": 13.84027037611925,
+          "win_threshold_bb_per_deal": 0.8578288452934055
+        },
+        {
+          "seed": "blue-risk-test-08",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.0085,
+          "sigma_bb_per_deal": 14.120200345880642,
+          "win_threshold_bb_per_deal": 0.8751790845732514
+        },
+        {
+          "seed": "blue-risk-test-09",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.3835,
+          "sigma_bb_per_deal": 12.922545024874934,
+          "win_threshold_bb_per_deal": 0.8009476387157679
+        },
+        {
+          "seed": "blue-risk-test-10",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.018,
+          "sigma_bb_per_deal": 13.46848455009234,
+          "win_threshold_bb_per_deal": 0.8347853210579674
+        },
+        {
+          "seed": "blue-risk-test-11",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.7785,
+          "sigma_bb_per_deal": 13.971055011276999,
+          "win_threshold_bb_per_deal": 0.8659349609624368
+        },
+        {
+          "seed": "blue-risk-test-12",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.1235,
+          "sigma_bb_per_deal": 13.663058842255161,
+          "win_threshold_bb_per_deal": 0.8468451606300189
+        }
+      ],
+      "paired_change_vs_unmodified": {
+        "bb_per_deal": -0.035541666666666666,
+        "ci95": [
+          -0.2666366616619471,
+          0.19555332832861375
+        ]
+      }
+    },
+    {
+      "label": "risk05-detail31",
+      "win": 1,
+      "draw": 11,
+      "loss": 0,
+      "points": 6.5,
+      "mean_bb_per_deal": 0.495,
+      "mean_sigma_bb_per_deal": 13.25323968629722,
+      "mean_win_threshold_bb_per_deal": 0.8214443061827598,
+      "matches": [
+        {
+          "seed": "blue-risk-test-01",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.379,
+          "sigma_bb_per_deal": 13.210047856248075,
+          "win_threshold_bb_per_deal": 0.8187672488211422
+        },
+        {
+          "seed": "blue-risk-test-02",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.476,
+          "sigma_bb_per_deal": 13.070051654459911,
+          "win_threshold_bb_per_deal": 0.8100901943372487
+        },
+        {
+          "seed": "blue-risk-test-03",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.597,
+          "sigma_bb_per_deal": 13.14425206553657,
+          "win_threshold_bb_per_deal": 0.8146891834627801
+        },
+        {
+          "seed": "blue-risk-test-04",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.128,
+          "sigma_bb_per_deal": 13.06755053087138,
+          "win_threshold_bb_per_deal": 0.8099351730911618
+        },
+        {
+          "seed": "blue-risk-test-05",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.379,
+          "sigma_bb_per_deal": 13.358398324866863,
+          "win_threshold_bb_per_deal": 0.8279621061278007
+        },
+        {
+          "seed": "blue-risk-test-06",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.7345,
+          "sigma_bb_per_deal": 13.410745984390944,
+          "win_threshold_bb_per_deal": 0.8312066476795927
+        },
+        {
+          "seed": "blue-risk-test-07",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.495,
+          "sigma_bb_per_deal": 13.387071699542387,
+          "win_threshold_bb_per_deal": 0.8297393003024905
+        },
+        {
+          "seed": "blue-risk-test-08",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.6145,
+          "sigma_bb_per_deal": 13.419117424870477,
+          "win_threshold_bb_per_deal": 0.8317255149361451
+        },
+        {
+          "seed": "blue-risk-test-09",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.682,
+          "sigma_bb_per_deal": 12.85913034513739,
+          "win_threshold_bb_per_deal": 0.7970171561445768
+        },
+        {
+          "seed": "blue-risk-test-10",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.242,
+          "sigma_bb_per_deal": 12.828796280790105,
+          "win_threshold_bb_per_deal": 0.7951370313576372
+        },
+        {
+          "seed": "blue-risk-test-11",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.5485,
+          "sigma_bb_per_deal": 13.543534438065828,
+          "win_threshold_bb_per_deal": 0.8394369613070468
+        },
+        {
+          "seed": "blue-risk-test-12",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.4225,
+          "sigma_bb_per_deal": 13.74017963078672,
+          "win_threshold_bb_per_deal": 0.8516251566254941
+        }
+      ],
+      "paired_change_vs_unmodified": {
+        "bb_per_deal": 0.005583333333333337,
+        "ci95": [
+          -0.22609760050029098,
+          0.23726426716695764
+        ]
+      }
+    },
+    {
+      "label": "risk10-detail31",
+      "win": 2,
+      "draw": 10,
+      "loss": 0,
+      "points": 7.0,
+      "mean_bb_per_deal": 0.5239583333333333,
+      "mean_sigma_bb_per_deal": 12.665628301016065,
+      "mean_win_threshold_bb_per_deal": 0.7850237751946699,
+      "matches": [
+        {
+          "seed": "blue-risk-test-01",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.0355,
+          "sigma_bb_per_deal": 13.405677974349226,
+          "win_threshold_bb_per_deal": 0.8308925291628387
+        },
+        {
+          "seed": "blue-risk-test-02",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.519,
+          "sigma_bb_per_deal": 13.225299525815949,
+          "win_threshold_bb_per_deal": 0.8197125570946554
+        },
+        {
+          "seed": "blue-risk-test-03",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.672,
+          "sigma_bb_per_deal": 12.748212930953613,
+          "win_threshold_bb_per_deal": 0.7901424235890357
+        },
+        {
+          "seed": "blue-risk-test-04",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.1325,
+          "sigma_bb_per_deal": 12.361452149697026,
+          "win_threshold_bb_per_deal": 0.766170742012455
+        },
+        {
+          "seed": "blue-risk-test-05",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.039,
+          "sigma_bb_per_deal": 13.29920478253673,
+          "win_threshold_bb_per_deal": 0.8242932523636792
+        },
+        {
+          "seed": "blue-risk-test-06",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": -0.2135,
+          "sigma_bb_per_deal": 12.960464551527132,
+          "win_threshold_bb_per_deal": 0.8032979153272894
+        },
+        {
+          "seed": "blue-risk-test-07",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.6055,
+          "sigma_bb_per_deal": 12.145889938262753,
+          "win_threshold_bb_per_deal": 0.7528100577267911
+        },
+        {
+          "seed": "blue-risk-test-08",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.666,
+          "sigma_bb_per_deal": 13.175717951730128,
+          "win_threshold_bb_per_deal": 0.816639459294539
+        },
+        {
+          "seed": "blue-risk-test-09",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.7645,
+          "sigma_bb_per_deal": 12.398104804878557,
+          "win_threshold_bb_per_deal": 0.7684424971167165
+        },
+        {
+          "seed": "blue-risk-test-10",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.53,
+          "sigma_bb_per_deal": 12.147413702498968,
+          "win_threshold_bb_per_deal": 0.7529045016126206
+        },
+        {
+          "seed": "blue-risk-test-11",
+          "points": 1.0,
+          "verdict": "AGENT1_WIN",
+          "bb_per_deal": 1.0105,
+          "sigma_bb_per_deal": 11.973596233244077,
+          "win_threshold_bb_per_deal": 0.7421311832531744
+        },
+        {
+          "seed": "blue-risk-test-12",
+          "points": 0.5,
+          "verdict": "CHOP",
+          "bb_per_deal": 0.5265,
+          "sigma_bb_per_deal": 12.146505066698623,
+          "win_threshold_bb_per_deal": 0.7528481837822444
+        }
+      ],
+      "paired_change_vs_unmodified": {
+        "bb_per_deal": 0.034541666666666665,
+        "ci95": [
+          -0.23111841153145543,
+          0.3002017448647888
+        ]
+      }
+    }
+  ],
+  "units": "true big blinds per duplicate deal",
+  "notes": "Risk penalties modify selection only. Referee outcomes and chips use the unchanged official objective. Each trial contains 1,000 duplicate deals.",
+  "variant_provenance": {
+    "risk010": {
+      "path": "experiments/blue_counter/selected_risk010",
+      "runtime_image": "sha256:e14728a91b49cbb77075b8ae7091c09579327dcf895022296d4f1123732a64e8",
+      "model_sha256": "2dfddc46859b4c5f8c4c8d8d17260fa30e827c8426bb39bbb3b909870d3fd2ba",
+      "files_sha256": {
+        "expert.py": "982b5da6b166e33f1b15c4ab273ea14128f33c285a7a9cd77065f582edc88b7d",
+        "features.py": "5f167fdafcc3ef8cad4af9584cc0e7902f67f405d91abde56986089bb4ec4d78",
+        "hand_features.npz": "2eff95fb5fcd383d74315b84ef60765083e150ae3d5a95e7a42de6017b36ebb4",
+        "response.npz": "2dfddc46859b4c5f8c4c8d8d17260fa30e827c8426bb39bbb3b909870d3fd2ba"
+      }
+    }
+  },
+  "conclusion": "The 0.10 heuristic lowered mean per-match payout SD by 9.0 percent, retaining 7.0/12 points. The unmodified expert also earned 7.0/12. Its measured +0.0345 BB/deal increment has a paired 95 percent interval spanning zero."
+}

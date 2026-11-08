@@ -1,0 +1,3 @@
+# Proxy selection stores SHA-256 of the exact frozen fixture plan bytes.
+panel.json binary
+*.gz binary

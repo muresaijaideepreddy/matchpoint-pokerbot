@@ -1,0 +1,20 @@
+{
+  "scores": {
+    "frozen": {
+      "wins": 15,
+      "draws": 5,
+      "losses": 0,
+      "points": 17.5,
+      "bb_per_deal": 2.735875
+    },
+    "confidence020": {
+      "wins": 16,
+      "draws": 3,
+      "losses": 1,
+      "points": 17.5,
+      "bb_per_deal": 2.1195
+    }
+  },
+  "faults": 0,
+  "decision": "keep saved Weights 3"
+}

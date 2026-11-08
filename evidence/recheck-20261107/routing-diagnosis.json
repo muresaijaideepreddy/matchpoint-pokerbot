@@ -1,0 +1,92 @@
+{
+  "replay_inputs": {
+    "blueprint-trace-r2-hands.tgz": "265555f48a702289d3f75c9ad1b640c7010de9338a3866a7db1260cb4bc1f5e9",
+    "trace-style-r2-hands.tgz": "a679c5e6d48f0bd9b9f68dd3656d994f7bc1dac5df6c181fea64c160f2426023"
+  },
+  "model_files": {
+    "experiments/size_mix_router.py": "b2d600d30f76d85893c5d9d9059dc10d8497f3f0bb97aadff7634566d458fc0a",
+    "experiments/balanced_router.py": "94afe795f37bf1a9350f5f024f9cec346d24402de855f086be619313585060c5"
+  },
+  "blueprint": {
+    "repository": "Dushyant-Betala/heads-up-bundle",
+    "commit": "ba64c267aa2e8c442e5e5f824539c400faea7a64",
+    "trace_seeds": [
+      "blueprint-trace-r2-1",
+      "blueprint-trace-r2-2"
+    ],
+    "played_hands": 4000,
+    "agent_decisions": 10185,
+    "original_value_decisions": 9394,
+    "original_selfplay_decisions": 791,
+    "actual_vs_recreated_action_disagreements": 0,
+    "new_switches_on_old_trajectory": 8787,
+    "first_switch_hand_by_half_zero_based": [
+      94,
+      68,
+      117,
+      64
+    ],
+    "legal_distinct_half_vs_pot": {
+      "half_open": 1211,
+      "all_opens": 1595,
+      "half_reraise": 69,
+      "all_reraises": 599
+    },
+    "new_seeds": [
+      "size-dev-p1",
+      "size-dev-p2",
+      "size-dev-p3"
+    ],
+    "development_bb_per_hand_rounded": {
+      "released": [
+        -0.519,
+        -0.184,
+        -0.206
+      ],
+      "size_release": [
+        0.059,
+        -0.176,
+        -0.015
+      ],
+      "sizemix450": [
+        0.035,
+        -0.128,
+        0.193
+      ]
+    },
+    "development_record": {
+      "released": {
+        "wins": 0,
+        "chops": 2,
+        "losses": 1
+      },
+      "size_release": {
+        "wins": 0,
+        "chops": 3,
+        "losses": 0
+      },
+      "sizemix450": {
+        "wins": 0,
+        "chops": 3,
+        "losses": 0
+      }
+    },
+    "strict_development_process_errors": 0
+  },
+  "shadow_controls": {
+    "sdplo_v3": {
+      "hands": 4000,
+      "decisions": 10483,
+      "new_switches": 0
+    },
+    "RangeEquityBot-v3": {
+      "hands": 4000,
+      "decisions": 10483,
+      "new_switches": 0
+    }
+  },
+  "caveats": [
+    "Shadow checks follow the actions from the recorded reference. A live strategy change can change opponents' subsequent actions.",
+    "Actual tournament roster and rank are unknown. Realized gains against one opponent may not transfer to other opponents with similar bet sizing."
+  ]
+}

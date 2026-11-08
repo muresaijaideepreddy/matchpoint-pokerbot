@@ -1,5 +1,11 @@
 # MatchPoint | Heads-up short-deck PLO5
 
+**Latest tested bundle: [Weights 3](weights/weights-3.zip)** ([v1.2.0 release](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/tag/v1.2.0)). It adds GPU-trained lookup policies with CPU-only inference. Across 182 retained matches it recorded **130 wins, 52 draws, zero losses and zero entrant faults**. On paired tests it improved the 25-team public proxy from **20.25/25 to 22.5/25**; this is not an official leaderboard score. [Full comparison and limits](evidence/blue-improvement-20261107/README.md)
+
+To test this version, **extract `weights/weights-3.zip` into its own directory** and run its `agent.py`. The repository-root `agent.py` still runs Weights 2. [Weights 1 and 2 remain available](weights/README.md), unchanged. The ZIP includes every model and source file needed to play; no GPU or model server is required.
+
+The [37-opponent field report](evidence/recheck-20261107/public-field.md) compares the released policy with new challengers on the same two sets of 1,000 duplicate deals per opponent. It links the exact public opponent revisions and reports both match points and big blinds per duplicate deal.
+
 SizeMix earned **46.5/50** official match points versus **46/50** for v1.0.0 on the same public opponents and fresh deals (200,000 played hands). The update changes preflop opponent recognition and uses the same trained weights. [50-fixture results](evidence/promotion50-20261107/README.md) · [Download SizeMix](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/tag/v1.1.0)
 
 MatchPoint is a Python bot for heads-up short-deck five-card pot-limit Omaha. The v1.0.0 release won a 2,000-hand practice match against Quad-J under the organizer's Linux referee by **1,748 chips (+0.437 big blinds per hand)**. Both bots finished with zero errors, skipped decisions or timeouts. [Match evidence](evidence/) · [Download the bot and training data](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases)
