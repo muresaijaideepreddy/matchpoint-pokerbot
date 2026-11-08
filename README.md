@@ -1,8 +1,10 @@
 # MatchPoint | Heads-up short-deck PLO5
 
-**Latest tested bundle: [Weights 3](weights/weights-3.zip)** ([v1.2.0 release](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/tag/v1.2.0)). It adds GPU-trained lookup policies with CPU-only inference. Across 182 retained matches it recorded **130 wins, 52 draws, zero losses and zero entrant faults**. On paired tests it improved the 25-team public proxy from **20.25/25 to 22.5/25**; this is not an official leaderboard score. [Full comparison and limits](evidence/blue-improvement-20261107/README.md)
+**The repository root runs [matchpointv5](weights/matchpointv5.zip).** It plays like Weights 3 until its own results within a half fall below a floor, then switches to a GPU-trained counter to range-reading opponents and, if that also falls behind, to the balanced Blueprint strategy. On the top-5 panel in tournament format it scored **63.0/108** against 36.0 for Weights 3, with losses falling from 39 to 6, and it ranked 3rd of 6 in a round robin among the top tier. [Tests and limits](evidence/matchpointv5-20261108/README.md)
 
-To test this version, **extract `weights/weights-3.zip` into its own directory** and run its `agent.py`. The repository-root `agent.py` still runs Weights 2. [Weights 1 and 2 remain available](weights/README.md), unchanged. The ZIP includes every model and source file needed to play; no GPU or model server is required.
+Weights 3 ([v1.2.0 release](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/tag/v1.2.0)) added GPU-trained lookup policies with CPU-only inference. Across 182 retained matches it recorded **130 wins, 52 draws, zero losses and zero entrant faults**. On paired tests it improved the 25-team public proxy from **20.25/25 to 22.5/25**; this is not an official leaderboard score. [Full comparison and limits](evidence/blue-improvement-20261107/README.md)
+
+The repository-root `agent.py` runs matchpointv5; `weights/matchpointv5.zip` holds the same files. [Weights 1, 2 and 3 remain available](weights/README.md), unchanged. Each ZIP includes every model and source file needed to play; no GPU or model server is required.
 
 The [37-opponent field report](evidence/recheck-20261107/public-field.md) compares the released policy with new challengers on the same two sets of 1,000 duplicate deals per opponent. It links the exact public opponent revisions and reports both match points and big blinds per duplicate deal.
 
@@ -14,7 +16,7 @@ The game engine, referee, Docker recipes and starter opponents come from the TAM
 
 Cloning this repository is sufficient to run the tournament bot. The release also includes the simulated training and evaluation replays, alternative model weights, and checksums. The research guide shows how to load the alternative models, including the residual network that achieved the lowest error on the blind test. [Research guide](experiments/research/README.md) · [Release assets](https://github.com/muresaijaideepreddy/matchpoint-pokerbot/releases/tag/v1.0.0)
 
-The tournament starts `agent.py`. It serves MatchPoint SizeMix with the Compact96 value model trained on Swirl and the 150,000-traversal self-play policy. `rivercount.py` preserves the original bot for head-to-head testing. Both use the tournament's exact two-hole-card and three-board-card rule.
+The tournament starts `agent.py`, which serves matchpointv5. Weights 2 (SizeMix) used the Compact96 value model trained on Swirl and the 150,000-traversal self-play policy. `rivercount.py` preserves the original bot for head-to-head testing. Both use the tournament's exact two-hole-card and three-board-card rule.
 
 MatchPoint observes how often its opponent opens, reraises and folds. Against opponents who consistently open and reraise before the flop, it uses a policy learned through self-play. A compact neural policy estimates the value of each legal action against other common opponents. A Monte Carlo policy table handles opponents that raise almost every chance. After observing at least 25 opening raises and 10 reraises before the flop, SizeMix can also choose self-play against opponents who frequently open half-pot and reraise pot-sized. Only observations from the current half affect the choice.
 
