@@ -1,0 +1,3 @@
+# The referee decision records the hash of the exact pre-match manifest bytes.
+panel.json binary
+returns.jsonl.gz binary

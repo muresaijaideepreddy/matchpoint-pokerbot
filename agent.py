@@ -17,7 +17,8 @@ if os.environ.get("RIVERCOUNT_MODEL"):
     choose_action = selected["choose_action"]
     on_hand_end = selected["on_hand_end"]
 else:
-    from matchpoint import AGENT_NAME, choose_action, new_half, on_hand_end
+    from matchpoint import AGENT_NAME
+    from size_mix_router import choose_release_action as choose_action, new_half, on_hand_end
 
 app = create_app(globals())
 
