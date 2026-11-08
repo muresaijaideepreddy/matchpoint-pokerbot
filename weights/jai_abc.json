@@ -1,0 +1,8 @@
+{"name": "jai_abc", "bot": "hanuman / jai_poker", "also_called": "jai-official (ABC mix)",
+ "members": ["runs/jaiA/ckpt_3000", "runs/jaiB/ckpt_2500 (= jaiv1)", "runs/jaiC/ckpt_3500"],
+ "play": "one member drawn uniformly at random at the start of each hand plays the whole hand",
+ "sha256_npz": "6e749d1d192486b6616dd11920513481561297b24bb2e7fd29fec93b3d126624", "image": "jai-abc:t",
+ "round_robin_66_bots": {"rank": 1, "points": "58.0/65", "wdl": "51/14/0"},
+ "field_test_60_rivals_x4": {"points": "55.62/60", "wdl": "205/35/0"},
+ "head_to_head": {"jaiv1": "draw 0/39/1, -0.008", "jaiv2": "0/36/4, -0.225", "deep_rl_pop3": "6/34/0, +0.259"},
+ "time_bank_used_worst_half_s": 2.49, "time_bank_s": 8.0, "timeouts": 0, "errors": 0}

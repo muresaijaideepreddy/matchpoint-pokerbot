@@ -2,7 +2,7 @@
 
 jai_poker is team **hanuman**'s bot for the TAMU Datathon heads-up short-deck PLO5 tournament. It answers `hanuman / jai_poker`.
 
-It plays with a deep reinforcement-learning policy: a small neural network (MLP) that reads the cards, pot and betting history and picks one of the four legal actions. The weights are in `nn_policy.npz`, and `nn_policy.py` runs them with NumPy only, on CPU.
+It plays with a deep reinforcement-learning policy. Each network is a small MLP that reads the cards, pot and betting history and picks one of the four legal actions. `nn_policy.npz` holds three such networks from three training runs. At the start of each hand the bot picks one of them at random, and that network plays the whole hand. `nn_policy.py` runs them with NumPy only, on CPU.
 
 The training started from the team's earlier deep-RL population, then continued on the GPU. The opponents were:
 
@@ -21,8 +21,11 @@ If the network ever fails to load or answer, the bot falls back to the bundled C
 
 | Version | Weights | Source | Results |
 | --- | --- | --- | --- |
-| **jaiv1** (played now) | `weights/jaiv1.npz` | step 2,500 | Tournament format: 61 wins, 59 draws, 0 losses in 120 matches. Draws vs the Blueprint, 5/6/0 vs the earlier deep-RL bot |
-| jaiv2 | `weights/jaiv2.npz` | step 6,000 | Trainer's duplicate evaluation, BB per hand: +0.46 vs jaiv1, +0.43 vs the earlier deep-RL population, +0.22 vs the Blueprint clone. Not yet tested in tournament format. It fails `test_nn_mode_never_wastes_the_nuts`: out of position it checks a river royal flush every time. |
+| **jai_abc** (played now) | `weights/jai_abc.npz` | jaiA step 3,000 + jaiB step 2,500 (jaiv1) + jaiC step 3,500 | 66-bot round robin: 1st, 58.0/65, 0 losses. Field test (60 rivals × 4 seeds): 55.62/60, 0 losses. Drew jaiv1 head to head |
+| jaiv1 | `weights/jaiv1.npz` | jaiB step 2,500 | 66-bot round robin: 2nd, 56.5/65, 0 losses. Field test: 54.88/60, 1 loss (to the Blueprint) |
+| jaiv2 | `weights/jaiv2.npz` | jaiB step 6,000 | 66-bot round robin: 5th, 54.5/65, 0 losses. Field test: 55.00/60, 0 losses. Beat jaiv1 head to head 10/30/0. It fails `test_nn_mode_never_wastes_the_nuts`: out of position it checks a river royal flush every time. |
+
+All three used at most 2.55 s of the 8 s time bank in any half, with no timeouts or errors.
 
 To play another version, copy its file over `nn_policy.npz`.
 
